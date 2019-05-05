@@ -16,7 +16,7 @@
         ?>
     </div>
     
-    <h1 class="jumbotron text-center bg-dark">Super Smash Bros. Ultimate</h1>
+    <h1 class="jumbotron text-center bg-dark title">Super Smash Bros. Ultimate</h1>
     <?php
         require("navbar.php");
     ?>

@@ -9,7 +9,7 @@
     <title>Assignments Page</title>
 </head>
 <body>
-    <h1 class="jumbotron text-center bg-dark">Assignments Page</h1>
+    <h1 class="jumbotron text-center bg-dark title">Assignments Page</h1>
     <?php
         require("navbar.php");
     ?>
