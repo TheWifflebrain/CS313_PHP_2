@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="homepage.css">
     <title>Super Smash Bros. Ultimate</title>
 </head>
 <body>
     <?php echo date("D M d, Y G:i a"); ?>
-    <h1>Super Smash Bros. Ultimate</h1>
+    <h1 class="jumbotron text-center">Super Smash Bros. Ultimate</h1>
 
     <div>
         <h2>About</h2>
