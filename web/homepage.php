@@ -38,7 +38,7 @@
         <p class="display-4">My Favorite Characters</p>
     </div>
         <div>
-            <p class="display-5">King Dedede</p>
+            <h3>King Dedede</h3>
             <p>
                 King Dedede is a fictional character and the main antagonist in Nintendo's Kirby video game series created by Masahiro Sakurai and 
                 developed by HAL Laboratory. Dedede first appeared in the 1992 video game Kirby's Dream Land as the main antagonist, and has returned 
@@ -50,7 +50,7 @@
         </div>
 
         <div>
-            <p class="display-5">Ike</p>
+            <h3>Ike</h3>
             <p>
                 Ike is a fictional character from the Fire Emblem series of video games. More specifically, he is the central protagonist and Lord-class 
                 character of the ninth game in the series, Fire Emblem: Path of Radiance and one of the central characters in Fire Emblem: Radiant Dawn. 
@@ -63,7 +63,7 @@
         </div>
 
         <div>
-            <p class="display-5">Sheik</p>
+            <h3>Sheik</h3>
             <p>
                 In The Legend of Zelda: Ocarina of Time, Zelda disguises herself as a surviving member of the Sheikah clan under the name of Sheik. With voice
                 muffled and face concealed, as well as wearing a form-fitting blue unitard with the red Sheikah eye in the center, Sheik is unrecognizable as Zelda.
