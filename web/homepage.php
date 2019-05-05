@@ -38,7 +38,7 @@
         <p class="display-4">My Favorite Characters</p>
     </div>
         <div>
-            <p class="display-4">King Dedede</p>
+            <p class="display-5">King Dedede</p>
             <p>
                 King Dedede is a fictional character and the main antagonist in Nintendo's Kirby video game series created by Masahiro Sakurai and 
                 developed by HAL Laboratory. Dedede first appeared in the 1992 video game Kirby's Dream Land as the main antagonist, and has returned 
