@@ -10,6 +10,9 @@
 </head>
 <body>
     <h1 class="jumbotron text-center">Assignments Page</h1>
+    <?php
+        require("navbar.php");
+    ?>
 
     <div>
         <h3>Coming Soon!</h3>
