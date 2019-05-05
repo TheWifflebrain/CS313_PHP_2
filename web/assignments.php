@@ -9,13 +9,13 @@
     <title>Assignments Page</title>
 </head>
 <body>
-    <h1 class="jumbotron text-center bg-dark title">Assignments Page</h1>
+    <p class="jumbotron text-center bg-dark title">Assignments Page</p>
     <?php
         require("navbar.php");
     ?>
 
     <div>
-        <p class="text-xl-center">Coming Soon!<p>
+        <p class="text-center display-1">Coming Soon!<p>
     </div>
     
 </body>
