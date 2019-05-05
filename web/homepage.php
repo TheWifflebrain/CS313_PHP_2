@@ -76,8 +76,10 @@
             <img id="sheikImage" class="mx-auto d-block" src="sheik.jpg" alt="Sheik image">
         </div>
 
+        <br>
+        <br>
         <div>
-            <button type="Button" class="btn btn-info" href="https://www.smashbros.com/en_US/">Learn More About Smash Ultimate</button>
+            <button type="Button" class="btn btn-info btn-block justify-content-center" onclick="https://www.smashbros.com/en_US/">Learn More About Smash Ultimate</button>
         </div>
 
 </body>
