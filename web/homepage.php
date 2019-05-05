@@ -56,7 +56,7 @@
                 raw personality and blue hair are derived from Hector, the protagonist of the first Fire Emblem released to Europe and North America, when 
                 Ike's creators discovered that he was one of the most popular characters in the series.
             </p>
-            <img class="mx-auto d-block" src="ike.jpg" alt="Ike image">
+            <img id="ikeImage" class="mx-auto d-block" src="ike.jpg" alt="Ike image">
         </div>
 
         <div>
@@ -70,7 +70,7 @@
                 The Legend of Zelda: Ocarina of Time, following changing her appearance, Zelda orders Impa to seal her consciousness away for seven years, so that 
                 she may become Sheik and live incognito.[15] Sheik also returned in Hyrule Warriors, using a harp and shortsword in her attacks.
             </p>
-            <img class="mx-auto d-block" src="sheik.jpg" alt="Sheik image">
+            <img id="sheikImage" class="mx-auto d-block" src="sheik.jpg" alt="Sheik image">
         </div>
 
     </div>
