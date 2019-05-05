@@ -67,7 +67,7 @@
     </div>
 
     <div>
-        <button><a href="assignments.php">Weekly Assignments Page</a></button>
+        <button href="assignments.php">Weekly Assignments Page</button>
     </div>
 
 </body>

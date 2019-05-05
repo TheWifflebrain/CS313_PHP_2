@@ -12,6 +12,10 @@
     <div>
         <h3>Coming Soon!</h3>
     </div>
+
+    <div>
+        <button href="homepage.php">Homepage</button>
+    </div>
     
 </body>
 </html>
