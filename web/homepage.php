@@ -36,6 +36,7 @@
 
     <div>
         <h2>My Favorite Characters</h2>
+    </div>
         <div>
             <h3>King Dedede</h3>
             <p>
@@ -74,8 +75,6 @@
             </p>
             <img id="sheikImage" class="mx-auto d-block" src="sheik.jpg" alt="Sheik image">
         </div>
-
-    </div>
 
     <div>
         <a href="assignments.php">Weekly Assignments Page</a>

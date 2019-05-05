@@ -2,8 +2,8 @@
     $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 ?>
 
-<nav class="navbar navbar-inverse">
-	<ul class="nav navbar-nav">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<ul class="navbar-nav">
 		<li class="nav-item <?php if ($file === 'homepage') echo 'active' ?>">
 			<a href="homepage.php">About Us</a>
 		</li>
@@ -13,3 +13,4 @@
 		</li>
 	<ul>
 </nav>
+
