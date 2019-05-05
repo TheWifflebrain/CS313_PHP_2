@@ -79,7 +79,9 @@
         <br>
         <br>
         <div>
-            <button type="Button" class="btn btn-info btn-block justify-content-center" onclick="https://www.smashbros.com/en_US/">Learn More About Smash Ultimate</button>
+            <form action="https://www.smashbros.com/en_US/">
+                <button type="Button" class="btn btn-info btn-block justify-content-center">Learn More About Smash Ultimate</button>
+            </form>
         </div>
 
 </body>
