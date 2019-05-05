@@ -14,7 +14,7 @@
     </div>
 
     <div>
-        <button href="homepage.php">Homepage</button>
+        <a href="homepage.php">Homepage</a>
     </div>
     
 </body>
