@@ -1,3 +1,13 @@
 div{
     padding: 10px 30px 10px 30px;
 }
+
+#sheikImage{
+    width: 720px;
+    height: 720px;
+}
+
+#ikeImage{
+    width: 540px;
+    height: 720px;
+}

@@ -10,7 +10,10 @@
 </head>
 <body>
     <div>
-        <?php echo date("D M d, Y G:i a"); ?>
+        <?php 
+            date_default_timezone_set('America/Denver');
+            echo date("D M d, Y G:i a"); 
+        ?>
     </div>
     <div>
         <h1 class="jumbotron text-center">Super Smash Bros. Ultimate</h1>
@@ -40,7 +43,7 @@
                 in several Kirby comic books, the 2001 anime series Kirby: Right Back at Ya!, and the Super Smash Bros. video game series (specifically 
                 Super Smash Bros. Brawl and all subsequent installments.
             </p>
-            <img src="KingDedede.jpg" alt="King Dedede image">
+            <img class="mx-auto d-block" src="KingDedede.jpg" alt="King Dedede image">
         </div>
 
         <div>
@@ -53,7 +56,7 @@
                 raw personality and blue hair are derived from Hector, the protagonist of the first Fire Emblem released to Europe and North America, when 
                 Ike's creators discovered that he was one of the most popular characters in the series.
             </p>
-            <img src="ike.jpg" alt="Ike image">
+            <img class="mx-auto d-block" src="ike.jpg" alt="Ike image">
         </div>
 
         <div>
@@ -67,7 +70,7 @@
                 The Legend of Zelda: Ocarina of Time, following changing her appearance, Zelda orders Impa to seal her consciousness away for seven years, so that 
                 she may become Sheik and live incognito.[15] Sheik also returned in Hyrule Warriors, using a harp and shortsword in her attacks.
             </p>
-            <img src="sheik.jpg" alt="Sheik image">
+            <img class="mx-auto d-block" src="sheik.jpg" alt="Sheik image">
         </div>
 
     </div>
