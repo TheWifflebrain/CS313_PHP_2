@@ -9,8 +9,12 @@
     <title>Super Smash Bros. Ultimate</title>
 </head>
 <body>
-    <?php echo date("D M d, Y G:i a"); ?>
-    <h1 class="jumbotron text-center">Super Smash Bros. Ultimate</h1>
+    <div>
+        <?php echo date("D M d, Y G:i a"); ?>
+    </div>
+    <div>
+        <h1 class="jumbotron text-center">Super Smash Bros. Ultimate</h1>
+    </div>
 
     <div>
         <h2>About</h2>
