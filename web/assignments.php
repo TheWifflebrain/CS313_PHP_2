@@ -15,11 +15,7 @@
     ?>
 
     <div>
-        <h3>Coming Soon!</h3>
-    </div>
-
-    <div>
-        <a href="homepage.php">Homepage</a>
+        <p class="text-xl-center">Coming Soon!<p>
     </div>
     
 </body>

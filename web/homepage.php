@@ -76,9 +76,5 @@
             <img id="sheikImage" class="mx-auto d-block" src="sheik.jpg" alt="Sheik image">
         </div>
 
-    <div>
-        <a href="assignments.php">Weekly Assignments Page</a>
-    </div>
-
 </body>
 </html>
