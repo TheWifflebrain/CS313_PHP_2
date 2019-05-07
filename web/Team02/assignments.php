@@ -15,11 +15,7 @@
     ?>
 
     <div>
-        <p class="text-center display-2">Coming Soon!</p>
-    </div>
-
-    <div>
-        <a class="text-center display-4" href="team3.php">Team03</a>
+        <p class="text-center display-2">Coming Soon!<p>
     </div>
     
 </body>
