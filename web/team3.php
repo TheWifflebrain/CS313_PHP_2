@@ -61,7 +61,7 @@ function test_input($data) {
     <?php
         $majors = array("CS", "CE", "CIT", "WDD");
         foreach ($majors as $listMajor){
-         echo "<input type='radio' name='major' value='$listMajor'> <?php $listMajor ?><br>";
+         echo "<input type='radio' name='major' value='$listMajor'> $listMajor<br>";
         }
     ?>
 
@@ -78,9 +78,9 @@ function test_input($data) {
     <input type="checkbox" name="c[]" value="GERMANY"> GERMANY
     -->
     <?php
-        $continents = array("NA" , "SA", "EU");
-        foreach ($continents as $continent){
-        echo "<input type='checkbox' name='c[]' value='$continent'>$continent<br>";
+        $continents = array("NA" => "North America" , "SA" => "South America", "EU" => "Europe");
+        foreach ($continents as $continent_key => $continent_value){
+        echo "<input type='checkbox' name='c[]' value='$continent_key'>$continent_value<br>";
         }
     ?>
     <br>
@@ -102,12 +102,12 @@ echo "Comments: " . $comment . "<br>";
 if(isset($_POST['major'])){
     echo "You have selected :".$_POST['major']; 
 }
-
+echo "<br>";
 echo "Boxes Checked: <br>";
 if(isset($_POST['submit'])){
     if(!empty($_POST['c'])){
-        foreach($_POST['c'] as $selected){
-            echo $selected."</br>";
+        foreach($_POST['c'] as $selected_key => $selected_value){
+            echo $selected_value . "</br>";
         }
     }
 }
