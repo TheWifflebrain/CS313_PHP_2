@@ -21,6 +21,9 @@
     <div>
         <a class="text-center display-4" href="team3.php">Team03</a>
     </div>
+    <div>
+        <a class="text-center display-4" href="week03/items.php">Shopping</a>
+    </div>
     
 </body>
 </html>
