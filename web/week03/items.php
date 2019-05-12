@@ -30,10 +30,6 @@ if(isset($_POST['submit'])){
     $_SESSION['inCart0'] = htmlentities($_POST['inCart0']);
     $_SESSION['inCart1'] = htmlentities($_POST['inCart1']);
     $_SESSION['inCart2'] = htmlentities($_POST['inCart2']);
-    $_SESSION['inCart3'] = htmlentities($_POST['inCart3']);
-    $_SESSION['inCart4'] = htmlentities($_POST['inCart4']);
-    
-
     header('Location: viewCart.php');
 }
 
@@ -84,7 +80,7 @@ if(isset($_POST['submit'])){
 
 
 <div class="row justify-content-center">
-    <input type="submit" name="submit" class="btn btn-dark" value="Proceed to View Cart">
+    <input type="submit" name="submit" class="btn btn-dark btn-lg" value="Proceed to View Cart">
 </div>
 </form>
  

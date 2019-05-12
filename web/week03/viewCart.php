@@ -1,5 +1,4 @@
 <?php
-		//require("sVariables.php");
 		session_start();
 		$key0 = $_SESSION['inCart0'];
 		$key1 = $_SESSION['inCart1'];
@@ -29,7 +28,6 @@
 	}
 					
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -95,7 +93,7 @@ if($key2 != 0){
 
 <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 	<div class="row justify-content-center">
-    	<input type="submit" name="submit" class="btn btn-dark" value="Proceed to Checkout">
+    	<input type="submit" name="submit" class="btn btn-dark btn-lg" value="Proceed to Checkout">
 	</div>
 
 </form>
