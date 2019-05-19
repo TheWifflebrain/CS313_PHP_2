@@ -25,7 +25,6 @@ for($i = 0; $i <5; $i++){
 }
 $_SESSION["boughtKeyboards"] = $products;
 
-
 if(isset($_POST['submit'])){
     $_SESSION['inCart0'] = htmlentities($_POST['inCart0']);
     $_SESSION['inCart1'] = htmlentities($_POST['inCart1']);
