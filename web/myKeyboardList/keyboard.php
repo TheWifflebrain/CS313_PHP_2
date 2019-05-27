@@ -27,14 +27,24 @@ foreach ($keyboards as $keyboard)
     $size = $keyboard['sizeK'];
     $type = $keyboard['typeK'];
     $forsale = $keyboard['forsale'];
-    $desc = $keyboard['descriptionk'];
+    $desc = $keyboard['descriptionK'];
     $photo = $keyboard['photo'];
     $name = $keyboard['keyboard_name'];
 
     echo "<li><p>$name - $type</a></p></li>";
     
 }
+
+foreach ($db->query('SELECT * FROM "keyboard"') as $row)
+            {
+              echo "<tr>";
+              echo "<td>" . $row["keyboard_id"];
+              echo "<td>" . $row["switch"];
+              echo "<td>" . $row["sizeK"];
+            }
 ?>
+
+
     
 </body>
 </html>
