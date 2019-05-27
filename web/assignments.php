@@ -24,6 +24,10 @@
     <div>
         <a class="text-center display-4" href="week03/items.php">Shopping</a>
     </div>
+
+    <div>
+        <a class="text-center display-4" href="myKeyboardList/keyboard.php">keyboard</a>
+    </div>
     
 </body>
 </html>
