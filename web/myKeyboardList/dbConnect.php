@@ -3,14 +3,15 @@
 * File: dbConnect.php
 * Author: Br. Burton
 * 
-* Description: Shows how to connect with Heroku credentials.
+* Description: Shows how to connect using either local
+* OR Heroku credentials, depending on whether the code
+* is executing at heroku.
 ***********************************************************/
 function get_db() {
 	$db = NULL;
 	try {
 		// default Heroku Postgres configuration URL
 		$dbUrl = getenv('DATABASE_URL');
-		// Get the various parts of the DB Connection from the URL
 		$dbopts = parse_url($dbUrl);
 		$dbHost = $dbopts["host"];
 		$dbPort = $dbopts["port"];
