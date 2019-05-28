@@ -14,7 +14,7 @@ $stmt->bindValue(':id', $keyboard_id, PDO::PARAM_INT);
 $stmt->execute();
 $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //var dump
-$keyboard_code = $keyboard_rows[0]['keyboard_name'];
+$keyboard_code = $keyboard_rows[0]['messageC'];
 
 ?>
 
