@@ -30,7 +30,7 @@ foreach ($keyboards as $keyboard)
     $photo = $keyboard['photo'];
     $name = $keyboard['keyboard_name'];
 
-    echo "<li><p>$name - $type</a></p></li>";
+    echo "<li><p>$name - $photo</a></p></li>";
     
 }
 
