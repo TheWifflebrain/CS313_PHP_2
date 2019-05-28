@@ -14,8 +14,7 @@ $stmt->bindValue(':id', $keyboard_id, PDO::PARAM_INT);
 $stmt->execute();
 $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //var dump
-$keyboard_code = $keyboard_rows[0]['messageC'];
-
+$keyboard_code = $keyboard_rows[0]['keyboard_name'];
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +32,7 @@ $keyboard_code = $keyboard_rows[0]['messageC'];
 <?php
 foreach ($keyboard_rows as $keyboard_row)
 {
-    $comment = $keyboard_row['messageC'];
+    $comment = $keyboard_row['messagec'];
     echo "<p>$comment</p>";
 }
 ?>
