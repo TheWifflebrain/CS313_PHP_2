@@ -43,7 +43,7 @@ foreach ($db->query('SELECT * FROM "keyboard"') as $keyboard)
         </div>
         
         <div>
-         <h3><?php echo $desc; ?></h3> 
+         <h3>"<?php echo $desc; ?>"</h3> 
         </div>
           
         <div class="container">           
