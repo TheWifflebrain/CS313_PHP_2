@@ -19,7 +19,7 @@ $keyboards = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Keyboard</title>
 </head>
 <body>
-<h1 class="jumbotron text-center">New Keyboards</h1>
+<h1 class="jumbotron text-center jumbo">New Keyboards</h1>
 
 <?php
 foreach ($db->query('SELECT * FROM "keyboard"') as $row)
@@ -39,7 +39,7 @@ foreach ($db->query('SELECT * FROM "keyboard"') as $row)
     </div>
         
         <div>
-        <img class="img-thumbnail" src="<?php echo $photo; ?>">
+        <img class="img-thumbnail text-center" src="<?php echo $photo; ?>">
         </div>
         
         <div>
