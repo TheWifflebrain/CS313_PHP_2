@@ -22,20 +22,20 @@ $keyboards = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <h1>New Keyboards</h1>
 
 <?php
-foreach ($db->query('SELECT * FROM "keyboard"') as $keyboard)
+foreach ($db->query('SELECT * FROM "keyboard"') as $row)
 {
-    $id = $keyboard['keyboard_id'];
-    $switch = $keyboard['switch'];
-    $size = $keyboard['sizeK'];
-    $type = $keyboard['typeK'];
-    $forsale = $keyboard['forsale'];
-    $desc = $keyboard['descriptionK'];
-    $photo = $keyboard['photo'];
-    $name = $keyboard['keyboard_name'];
+    $id = $row['keyboard_id'];
+    $switch = $row['switch'];
+    $size = $row['sizeK'];
+    $type = $row['typeK'];
+    $forsale = $row['forsale'];
+    $desc = $row['descriptionK'];
+    $photo = $row['photo'];
+    $name = $row['keyboard_name'];
 ?>
 <div class="border keyList">
 <div class="jumbotron text-center">
-    <h1><?php echo $keyboard["keyboard_name"]; ?></h1>
+    <h1><?php echo $name; ?></h1>
         </div>
         
         <div>
@@ -43,7 +43,7 @@ foreach ($db->query('SELECT * FROM "keyboard"') as $keyboard)
         </div>
         
         <div>
-         <h3>"<?php echo $desc; ?>"</h3> 
+         <h3><?php echo $desc; ?></h3> 
         </div>
           
         <div class="container">           
@@ -58,10 +58,10 @@ foreach ($db->query('SELECT * FROM "keyboard"') as $keyboard)
             </thead>
             <tbody>
               <tr>
-                <td><?php echo $keyboard["switch"]; ?></td>
-                <td><?php echo $keyboard["type"]; ?></td>
-                <td><?php echo $keyboard["size"]; ?></td>
-                <td><?php echo $keyboard["forsale"]; ?></td>
+                <td><?php echo $switch; ?></td>
+                <td><?php echo $type; ?></td>
+                <td><?php echo $size; ?></td>
+                <td><?php echo $forsale; ?></td>
               </tr>
             </tbody>
           </table>
