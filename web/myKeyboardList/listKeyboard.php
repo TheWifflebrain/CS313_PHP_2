@@ -35,7 +35,7 @@ foreach ($db->query('SELECT * FROM "keyboard"') as $row)
 ?>
 <div class="border keyList">
     <div class="jumbotron text-center">
-        <h1><a href=<?php "keyboardPage.php?keyboard_id=$id" ?>><?php echo $name; ?></a></h1>
+        <h1><a href="keyboardPage.php?keyboard_id=<?php echo $id ?>"><?php echo $name; ?></a></h1>
     </div>
         
         <div>
