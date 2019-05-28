@@ -39,7 +39,7 @@ foreach ($db->query('SELECT * FROM "keyboard"') as $row)
     </div>
         
         <div>
-        <img class="img-thumbnail text-center" src="<?php echo $photo; ?>">
+        <img class="img-thumbnail mx-auto d-block img-fluid" src="<?php echo $photo; ?>">
         </div>
         
         <div>
