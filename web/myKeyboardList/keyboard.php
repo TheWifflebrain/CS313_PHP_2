@@ -39,11 +39,11 @@ foreach ($db->query('SELECT * FROM "keyboard"') as $keyboard)
         </div>
         
         <div>
-        <img class="img-thumbnail" src="<?php echo $keyboard["photo"]; ?>">
+        <img class="img-thumbnail" src="<?php echo $photo; ?>">
         </div>
         
         <div>
-         <h3><?php echo $keyboard["descriptionK"]; ?></h3> 
+         <h3><?php echo $desc; ?></h3> 
         </div>
           
         <div class="container">           
