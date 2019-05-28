@@ -2,11 +2,10 @@
 require('dbConnect.php');
 $db = get_db();
 
-$query = 'SELECT keyboard_id, switch, sizek, typek, forsale, descriptionk, 
-photo, keyboard_name, user_id FROM keyboard';
+$query = 'SELECT keyboard_id, switch, sizeK, typeK, forsale, descriptionK, photo, keyboard_name, user_id FROM keyboard';
 $stmt = $db->prepare($query);
 $stmt->execute();
-$courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$keyboards = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +17,7 @@ $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Keyboard</title>
 </head>
 <body>
-<h1>Keyboards in Database</h1>
+<h1>New Keyboards</h1>
 <?php
 foreach ($keyboards as $keyboard)
 {
