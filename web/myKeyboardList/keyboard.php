@@ -19,24 +19,24 @@ $keyboards = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Keyboard</title>
 </head>
 <body>
-<h1>New Keyboards</h1>
+<h1 class="jumbotron text-center">New Keyboards</h1>
 
 <?php
 foreach ($db->query('SELECT * FROM "keyboard"') as $row)
 {
     $id = $row['keyboard_id'];
     $switch = $row['switch'];
-    $size = $row['sizeK'];
-    $type = $row['typeK'];
+    $size = $row['sizek'];
+    $type = $row['typek'];
     $forsale = $row['forsale'];
-    $desc = $row['descriptionK'];
+    $desc = $row['descriptionk'];
     $photo = $row['photo'];
     $name = $row['keyboard_name'];
 ?>
 <div class="border keyList">
-<div class="jumbotron text-center">
-    <h1><?php echo $name; ?></h1>
-        </div>
+    <div class="jumbotron text-center">
+        <h1><?php echo $name; ?></h1>
+    </div>
         
         <div>
         <img class="img-thumbnail" src="<?php echo $photo; ?>">
