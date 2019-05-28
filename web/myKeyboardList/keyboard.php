@@ -39,7 +39,7 @@ foreach ($db->query('SELECT * FROM "keyboard"') as $keyboard)
         </div>
         
         <div>
-        <img id="sheikImage" class="img-thumbnail" src=<?php echo $keyboard["photo"]; ?>>
+        <img nclass="img-thumbnail" src="<?php echo $keyboard["photo"]; ?>">
         </div>
         
         <div>
@@ -59,8 +59,8 @@ foreach ($db->query('SELECT * FROM "keyboard"') as $keyboard)
             <tbody>
               <tr>
                 <td><?php echo $keyboard["switch"]; ?></td>
-                <td><?php echo $keyboard["typeK"]; ?></td>
-                <td><?php echo $keyboard["sizeK"]; ?></td>
+                <td><?php echo $keyboard["type"]; ?></td>
+                <td><?php echo $keyboard["size"]; ?></td>
                 <td><?php echo $keyboard["forsale"]; ?></td>
               </tr>
             </tbody>
