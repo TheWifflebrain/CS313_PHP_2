@@ -9,7 +9,7 @@ $keyboard_id = htmlspecialchars($_GET['keyboard_id']);
 require('dbConnect.php');
 $db = get_db();
 
-$stmt = $db->prepare('SELECT * FROM keyboard FULL OUTER JOIN commentPost ON commentPost.keyboard_id = keyboard.keyboard_id;');
+$stmt = $db->prepare('SELECT k.*, c.* FROM keyboard k LEFT JOIN commentPost c ON k.keyboard_id = c.keyboard_id');
 $stmt->bindValue(':id', $keyboard_id, PDO::PARAM_INT);
 $stmt->execute();
 $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
