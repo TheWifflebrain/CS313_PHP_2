@@ -23,6 +23,8 @@ $keyboard_code = $keyboard_rows[0]['keyboard_name'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -30,7 +32,7 @@ $keyboard_code = $keyboard_rows[0]['keyboard_name'];
 <h1><?php echo $keyboard_code;?><h1>
 
 <?php
-foreach ($keyboard_rows as $keyboard_row)
+foreach ($keyboard_row as $keyboard_row)
 {
     $id = $row['keyboard_id'];
     $switch = $keyboard_row['switch'];
@@ -79,7 +81,7 @@ foreach ($keyboard_rows as $keyboard_row)
 <?php
 }
 ?>
-
+<h4>Comments<h4>
 <?php
 foreach ($keyboard_rows as $keyboard_row)
 {
