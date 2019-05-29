@@ -29,8 +29,6 @@ $keyboard_code = $keyboard_rows[0]['keyboard_name'];
 
 <h1><?php echo $keyboard_code;?><h1>
 
-
-
 <?php
 foreach ($keyboard_rows as $keyboard_row)
 {
@@ -43,9 +41,51 @@ foreach ($keyboard_rows as $keyboard_row)
     $photo = $keyboard_row['photo'];
     $name = $keyboard_row['keyboard_name'];
     $comment = $keyboard_row['messagec'];
-    
+?>
+<div class="border keyList">
+    <div class="jumbotron text-center">
+        <h1><a href="keyboardPage.php?keyboard_id=<?php echo $id ?>"><?php echo $name; ?></a></h1>
+    </div>
+        
+        <div>
+        <img class="img-thumbnail mx-auto d-block img-fluid" src="<?php echo $photo; ?>">
+        </div>
+        
+        <div>
+         <h4><?php echo $desc; ?></h4> 
+        </div>
+          
+        <div class="container">           
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Switch</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>For Sale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><?php echo $switch; ?></td>
+                <td><?php echo $type; ?></td>
+                <td><?php echo $size; ?></td>
+                <td><?php echo $forsale; ?></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+<?php
+}
+?>
+
+<?php
+foreach ($keyboard_rows as $keyboard_row)
+{
+    $comment = $keyboard_row['messagec'];
+
     echo "<p>$comment</p>";
-    echo "<p>$switch</p>";
 }
 ?>
 
