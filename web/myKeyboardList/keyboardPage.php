@@ -29,8 +29,6 @@ $keyboard_code = $keyboard_rows[0]['keyboard_name'];
 </head>
 <body>
 
-<h1><?php echo $keyboard_code;?><h1>
-
 <?php
 foreach ($keyboard_rows as $keyboard_row)
 {
@@ -45,7 +43,7 @@ foreach ($keyboard_rows as $keyboard_row)
 ?>
 <div class="border keyList">
     <div class="jumbotron text-center">
-        <h1><a href="keyboardPage.php?keyboard_id=<?php echo $id ?>"><?php echo $name; ?></a></h1>
+        <h1><?php echo $name; ?></h1>
     </div>
         
         <div>
@@ -81,16 +79,27 @@ foreach ($keyboard_rows as $keyboard_row)
 break;
 }
 ?>
-<h4>Comments<h4>
-<?php
-foreach ($keyboard_rows as $keyboard_row)
-{
-    $comment = $keyboard_row['messagec'];
+<div class="container">           
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Comments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              <?php
+                foreach ($keyboard_rows as $keyboard_row)
+                {
+                    $comment = $keyboard_row['messagec'];
 
-    echo "<p>$comment</p>";
-}
-?>
-
+                    echo "<td>$comment</td>";
+                }
+                ?>
+              </tr>
+            </tbody>
+          </table>
+        </div>
     
 </body>
 </html>
