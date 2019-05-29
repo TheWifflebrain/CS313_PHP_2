@@ -79,13 +79,11 @@ foreach ($keyboard_rows as $keyboard_row)
 break;
 }
 ?>
+    <div>
+         <h4 class="text-center">Comments</h4> 
+    </div>
 <div class="container">           
           <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Comments</th>
-              </tr>
-            </thead>
             <tbody>
               <?php
                 foreach ($keyboard_rows as $keyboard_row)
