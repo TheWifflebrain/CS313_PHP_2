@@ -35,15 +35,15 @@ $keyboard_code = $keyboard_rows[0]['keyboard_name'];
 foreach ($keyboard_rows as $keyboard_row)
 {
     $id = $row['keyboard_id'];
-    $switch = $row['switch'];
-    $size = $row['sizek'];
-    $type = $row['typek'];
-    $forsale = $row['forsale'];
-    $desc = $row['descriptionk'];
-    $photo = $row['photo'];
-    $name = $row['keyboard_name'];
-
+    $switch = $keyboard_row['switch'];
+    $size = $keyboard_row['sizek'];
+    $type = $keyboard_row['typek'];
+    $forsale = $keyboard_row['forsale'];
+    $desc = $keyboard_row['descriptionk'];
+    $photo = $keyboard_row['photo'];
+    $name = $keyboard_row['keyboard_name'];
     $comment = $keyboard_row['messagec'];
+    
     echo "<p>$comment</p>";
     echo "<p>$switch</p>";
 }
