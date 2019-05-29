@@ -87,16 +87,15 @@ break;
               </tr>
             </thead>
             <tbody>
-              <tr>
               <?php
                 foreach ($keyboard_rows as $keyboard_row)
                 {
                     $comment = $keyboard_row['messagec'];
-
+                    echo "<tr>";
                     echo "<td>$comment</td>";
+                    echo "</tr>";
                 }
                 ?>
-              </tr>
             </tbody>
           </table>
         </div>
