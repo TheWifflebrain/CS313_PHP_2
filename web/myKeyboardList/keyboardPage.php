@@ -32,9 +32,8 @@ $keyboard_code = $keyboard_rows[0]['keyboard_name'];
 <h1><?php echo $keyboard_code;?><h1>
 
 <?php
-foreach ($keyboard_row as $keyboard_row)
+for ($a = 0; $a < 1; $a++)
 {
-    $id = $row['keyboard_id'];
     $switch = $keyboard_row['switch'];
     $size = $keyboard_row['sizek'];
     $type = $keyboard_row['typek'];
