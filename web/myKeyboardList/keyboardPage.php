@@ -80,7 +80,7 @@ break;
 }
 ?>
     <div>
-         <h4 class="text-center">Comments</h4> 
+         <h3 class="text-center">Comments</h3> 
     </div>
 <div class="container">           
           <table class="table table-striped">
