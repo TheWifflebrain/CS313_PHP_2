@@ -29,13 +29,26 @@ $keyboard_code = $keyboard_rows[0]['keyboard_name'];
 
 <h1><?php echo $keyboard_code;?><h1>
 
+
+
 <?php
 foreach ($keyboard_rows as $keyboard_row)
 {
+    $id = $row['keyboard_id'];
+    $switch = $row['switch'];
+    $size = $row['sizek'];
+    $type = $row['typek'];
+    $forsale = $row['forsale'];
+    $desc = $row['descriptionk'];
+    $photo = $row['photo'];
+    $name = $row['keyboard_name'];
+
     $comment = $keyboard_row['messagec'];
     echo "<p>$comment</p>";
+    echo "<p>$switch</p>";
 }
 ?>
+
     
 </body>
 </html>
