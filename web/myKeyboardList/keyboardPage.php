@@ -32,7 +32,7 @@ $keyboard_code = $keyboard_rows[0]['keyboard_name'];
 <h1><?php echo $keyboard_code;?><h1>
 
 <?php
-for ($a = 0; $a < 1; $a++)
+for ($a = 0; $a <= 1; $a++)
 {
     $switch = $keyboard_row['switch'];
     $size = $keyboard_row['sizek'];
