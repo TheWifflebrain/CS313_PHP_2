@@ -42,7 +42,7 @@ foreach ($username_rows as $username_row)
     $photo = $username_row['photo'];
     $name = $username_row['keyboard_name'];
     $user = $username_row['username'];
-    $id = $row['keyboard_id'];
+    $id = $username_row['keyboard_id'];
 ?>
 <div class="border keyList">
 <div class="jumbotron text-center">
