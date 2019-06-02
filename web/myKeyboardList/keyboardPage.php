@@ -14,7 +14,7 @@ $keyboard_id = htmlspecialchars($_GET['keyboard_id']);
 
 require('dbConnect.php');
 $db = get_db();
-$stmt = $db->prepare('SELECT k.*, c.* FROM keyboard k LEFT JOIN commentPost c ON k.keyboard_id = c.keyboard_id WHERE c.keyboard_id=:id');
+$stmt = $db->prepare('SELECT k.*, c.* FROM keyboard k LEFT JOIN commentPost c ON k.keyboard_id = c.keyboard_id_CP WHERE c.keyboard_id_CP=:id');
 $stmt->bindValue(':id', $keyboard_id, PDO::PARAM_INT);
 $stmt->execute();
 $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -97,7 +97,7 @@ break;
               <?php
                 foreach ($keyboard_rows as $keyboard_row)
                 {
-                    $comment = $keyboard_row['messagec'];
+                    $comment = $keyboard_row['messageC'];
                     $userCP = $keyboard_row['username_CP'];
                     echo "<tr>";
                     echo "<td>$comment</td>";
