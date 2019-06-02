@@ -27,7 +27,9 @@ $username_code = $username_rows[0]['username'];
     <title>Homepage</title>
 </head>
 <body>
-
+<div class="jumbotron text-center">
+        <h1><?php echo $user; ?>'s Homepage</h1>
+    </div>
 <?php
 foreach ($username_rows as $username_row)
 {
@@ -41,9 +43,6 @@ foreach ($username_rows as $username_row)
     $user = $username_row['username'];
 ?>
 <div class="border keyList">
-    <div class="jumbotron text-center">
-        <h1><?php echo $user; ?>'s Homepage</h1>
-    </div>
         
         <div>
         <img class="img-thumbnail mx-auto d-block img-fluid" src="<?php echo $photo; ?>">
