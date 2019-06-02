@@ -44,7 +44,7 @@ foreach ($keyboard_rows as $keyboard_row)
     $photo = $keyboard_row['photo'];
     $name = $keyboard_row['keyboard_name'];
     $comment = $keyboard_row['messagec'];
-    $userK = $keyboard_row['username_K'];
+    $userK = $keyboard_row['username_k'];
 ?>
 <div class="border keyList">
     <div class="jumbotron text-center">
