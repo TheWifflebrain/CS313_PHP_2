@@ -2,7 +2,7 @@
 require('dbConnect.php');
 $db = get_db();
 
-$query = 'SELECT keyboard_id, switch, sizeK, typeK, forsale, descriptionK, photo, keyboard_name, user_id FROM keyboard';
+$query = 'SELECT keyboard_id, switch, sizeK, typeK, forsale, descriptionK, photo, keyboard_name, username FROM keyboard';
 $stmt = $db->prepare($query);
 $stmt->execute();
 $keyboards = $stmt->fetchAll(PDO::FETCH_ASSOC);
