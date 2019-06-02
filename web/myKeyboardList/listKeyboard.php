@@ -2,7 +2,7 @@
 require('dbConnect.php');
 $db = get_db();
 
-$query = 'SELECT keyboard_id, switch, sizeK, typeK, forsale, descriptionK, photo, keyboard_name, username FROM keyboard';
+$query = 'SELECT keyboard_id, switch, sizeK, typeK, forsale, descriptionK, photo, keyboard_name, username_K FROM keyboard';
 $stmt = $db->prepare($query);
 $stmt->execute();
 $keyboards = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -32,7 +32,7 @@ foreach ($db->query('SELECT * FROM "keyboard"') as $row)
     $desc = $row['descriptionk'];
     $photo = $row['photo'];
     $name = $row['keyboard_name'];
-    $user = $row['username'];
+    $user = $row['username_K'];
 ?>
 <div class="border keyList">
     <div class="jumbotron text-center">

@@ -9,7 +9,7 @@ $username = htmlspecialchars($_GET['username']);
 
 require('dbConnect.php');
 $db = get_db();
-$stmt = $db->prepare('SELECT k.*, p.* FROM keyboard k LEFT JOIN person p on k.username = p.username WHERE k.username=:user');
+$stmt = $db->prepare('SELECT k.*, p.* FROM keyboard k LEFT JOIN person p on k.username_K = p.username WHERE k.username_K=:user');
 $stmt->bindValue(':user', $username, PDO::PARAM_INT);
 $stmt->execute();
 $username_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -41,7 +41,7 @@ foreach ($username_rows as $username_row)
     $desc = $username_row['descriptionk'];
     $photo = $username_row['photo'];
     $name = $username_row['keyboard_name'];
-    $user = $username_row['username'];
+    $user = $username_row['username_K'];
     $id = $username_row['keyboard_id'];
 ?>
 <div class="border keyList">
