@@ -44,10 +44,12 @@ foreach ($keyboard_rows as $keyboard_row)
     $photo = $keyboard_row['photo'];
     $name = $keyboard_row['keyboard_name'];
     $comment = $keyboard_row['messagec'];
+    $user = $keyboard_row['username'];
 ?>
 <div class="border keyList">
     <div class="jumbotron text-center">
         <h1><?php echo $name; ?></h1>
+        <h4><a href="homepage.php?username=<?php echo $user ?>"><?php echo $user; ?></a></h4>
     </div>
         
         <div>
@@ -95,6 +97,7 @@ break;
                     $comment = $keyboard_row['messagec'];
                     echo "<tr>";
                     echo "<td>$comment</td>";
+                    echo "<td>$user</td>";
                     echo "</tr>";
                 }
                 ?>
