@@ -27,11 +27,9 @@ $username_code = $username_rows[0]['username'];
     <title>Homepage</title>
 </head>
 <body>
-<?php
-    $user = $username_row['username'];
-?>
+
 <div class="jumbotron text-center jumbo">
-        <h1><?php echo $user; ?>'s Homepage</h1>
+        <h1><?php echo $username; ?>'s Homepage</h1>
 </div>
 <?php
 foreach ($username_rows as $username_row)
