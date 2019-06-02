@@ -99,10 +99,12 @@ break;
                 {
                     $comment = $keyboard_row['messagec'];
                     $userCP = $keyboard_row['username_cp'];
-                    echo "<tr>";
-                    echo "<td>$comment</td>";
-                    echo "<td>$userCP</td>";
-                    echo "</tr>";
+                ?>
+                    <tr>
+                    <td><?php echo $comment; ?></td>
+                    <td><a href="homepage.php?username=<?php echo $userCP ?>"><?php echo $userCP; ?></a></td>
+                    </tr>
+                <?php
                 }
                 ?>
             </tbody>
