@@ -6,12 +6,6 @@ if (!isset($_GET['keyboard_id']))
 }
 $keyboard_id = htmlspecialchars($_GET['keyboard_id']);
 
-//selects everything from keybaord and person where the ids match
-//SELECT k.*, p.* FROM keyboard k LEFT JOIN person p ON k.user_id = p.user_id WHERE k.user_id = 1;
-
-//slects everything from what a user posted
-//SELECT c.*, p.* FROM commentPost c LEFT JOIN person p ON c.user_id = p.user_id WHERE c.user_id = 1;
-
 require('dbConnect.php');
 $db = get_db();
 $stmt = $db->prepare('SELECT k.*, c.* FROM keyboard k LEFT JOIN commentPost c ON k.keyboard_id = c.keyboard_id_CP WHERE c.keyboard_id_CP=:id');
@@ -32,7 +26,10 @@ $keyboard_code = $keyboard_rows[0]['keyboard_name'];
     <title>Document</title>
 </head>
 <body>
-
+<?php
+        require("navbar.php");
+?>
+    
 <?php
 foreach ($keyboard_rows as $keyboard_row)
 {

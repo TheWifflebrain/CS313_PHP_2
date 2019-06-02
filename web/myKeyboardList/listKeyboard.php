@@ -19,6 +19,12 @@ $keyboards = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Keyboard</title>
 </head>
 <body>
+
+<?php
+        require("navbar.php");
+?>
+
+
 <h1 class="jumbotron text-center jumbo">New Keyboards</h1>
 
 <?php
