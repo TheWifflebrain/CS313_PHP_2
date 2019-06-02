@@ -45,7 +45,7 @@ foreach ($username_rows as $username_row)
 ?>
 <div class="border keyList">
 <div class="jumbotron text-center">
-        <h1><?php echo $name; ?></h1>
+    <h1><a href="keyboardPage.php?keyboard_id=<?php echo $id ?>"><?php echo $name; ?></a></h1>
 </div>
         <div>
         <img class="img-thumbnail mx-auto d-block img-fluid" src="<?php echo $photo; ?>">
