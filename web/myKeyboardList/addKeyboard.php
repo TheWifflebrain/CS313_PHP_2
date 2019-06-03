@@ -13,7 +13,7 @@
 
     $stmt = $db->prepare('INSERT INTO keyboard(switch, sizeK, typeK, 
     forsale, descriptionK, photo, keyboard_name, username_K) VALUES (:switch, 
-    size, typeK, forsale, descK, photo, keyboardName, user);');
+    :size, :typeK, :forsale, :descK, :photo, :keyboardName, :user);');
 
     $stmt->bindValue(':switch', $switch, PDO::PARAM_STR);
     $stmt->bindValue(':size', $size, PDO::PARAM_STR);
