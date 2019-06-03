@@ -25,12 +25,10 @@ if(isset($_POST['login'])){
                 echo $pass;
                 $count++;
             }
-            if($password == $row['passwordU']){
+            if($pass){
                 session_start();
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $username;
-                header("Location: homepage.php?username=$username");
-                die();
             }
         }
         catch(Exception $ex)
@@ -39,6 +37,8 @@ if(isset($_POST['login'])){
             header("Location: login.php?incorrectUsernameOrPassword");
             die();
         } 
+        header("Location: homepage.php?username=$username");
+        die();
     }   
 }
 ?>
