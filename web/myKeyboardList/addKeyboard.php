@@ -9,7 +9,7 @@
     $desc = htmlspecialchars($_POST['desc']);
     $photo = htmlspecialchars($_POST['photo']);
     $name = htmlspecialchars($_POST['keyboardName']);
-    $user = htmlspecialchars($_POST['username_id']);
+    $user = htmlspecialchars($_POST['username']);
 
     $stmt = $db->prepare('INSERT INTO keyboard(switch, sizeK, typeK, 
     forsale, descriptionK, photo, keyboard_name, username_K) VALUES (:switch, 
