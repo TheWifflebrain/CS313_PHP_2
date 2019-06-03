@@ -19,12 +19,12 @@
 			 			<div class="panel-body">
 			    		<form method="POST" action="addUser.php">
 			    			<div class="row">
-			    				<div class="col-md-6">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
 			                <input type="text" name="fName" id="fName" class="form-control input-sm" placeholder="First Name">
 			    					</div>
 			    				</div>
-			    				<div class="col-md-6">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
 			    						<input type="text" name="lName" id="lName" class="form-control input-sm" placeholder="Last Name">
 			    					</div>
@@ -40,12 +40,12 @@
 			    			</div>
 
 			    			<div class="row">
-			    				<div class="col-md-6">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
 			    						<input type="password" name="pwd" id="pwd" class="form-control input-sm" placeholder="Password">
 			    					</div>
 			    				</div>
-			    				<div class="col-md-6">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
 			    						<input type="password" name="rpt-password" id="rpt-password" class="form-control input-sm" placeholder="Confirm Password">
 			    					</div>
