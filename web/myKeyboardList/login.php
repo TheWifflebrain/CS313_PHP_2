@@ -17,7 +17,7 @@
 			    		<h3 class="panel-title">Login!</h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form method="POST" action="addUser.php">
+			    		<form method="POST" action="addLogin.php">
 			    		
 
                 		<div class="form-group">
