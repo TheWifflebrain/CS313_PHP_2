@@ -17,9 +17,9 @@
 
     $stmt->bindValue(':switch', $switch, PDO::PARAM_STR);
     $stmt->bindValue(':size', $size, PDO::PARAM_STR);
-    $stmt->bindValue(':type', $typeK, PDO::PARAM_STR);
+    $stmt->bindValue(':typeK', $typeK, PDO::PARAM_STR);
     $stmt->bindValue(':forsale', $forsale, PDO::PARAM_STR);
-    $stmt->bindValue(':desc', $descK, PDO::PARAM_STR);
+    $stmt->bindValue(':descK', $descK, PDO::PARAM_STR);
     $stmt->bindValue(':photo', $phot, PDO::PARAM_STR);
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt->bindValue(':user', $user, PDO::PARAM_STR);
