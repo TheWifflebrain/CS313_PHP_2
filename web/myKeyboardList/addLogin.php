@@ -23,9 +23,8 @@ if(isset($_POST['login'])){
                 $checker=$row['passwordU'];
                 $pass=password_verify($password, $checker);
                 $count++;
-                echo $count;
             }
-            if($pass){
+            if($password == password_verify($password, $checker)){
                 session_start();
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $username;
