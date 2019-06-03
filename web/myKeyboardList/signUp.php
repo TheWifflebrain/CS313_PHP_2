@@ -1,3 +1,52 @@
+<?php
+v    $nameERR = $emailERR = $addressERR = $cityERR = $stateERR = $zipERR = "";
+$name = $email = $address = $city = $state = $zip = "";
+
+if(isset($_POST['submit'])){
+
+    $_SESSION['name'] = htmlentities($_POST['name']);
+    $_SESSION['email'] = htmlentities($_POST['email']);
+    $_SESSION['address'] = htmlentities($_POST['address']);
+    $_SESSION['city'] = htmlentities($_POST['city']);
+    $_SESSION['state'] = htmlentities($_POST['state']);
+    $_SESSION['zip'] = htmlentities($_POST['zip']);
+    $name = $_SESSION['name'];
+    $email = $_SESSION['email'];
+    $address = $_SESSION['address'];
+    $city =  $_SESSION['city'];
+    $state = $_SESSION['state'];
+    $zip =$_SESSION['zip'];
+
+    if(empty($name)){
+        $nameERR = "*Name is required.";
+    }
+
+    if(empty($email)){
+        $emailERR = "*Email is required.";
+    }
+
+    if(empty($address)){
+        $addressERR = "*Address is required.";
+    }
+
+    if(empty($city)){
+        $cityERR = "*City is required.";
+    }
+
+    if(empty($state)){
+        $stateERR = "*State is required.";
+    }
+
+    if(empty($zip)){
+        $zipERR = "*Zip code is required.";
+    }
+
+    if(!empty($name) && !empty($email) && !empty($city) && !empty($state) && !empty($zip) && !empty($address)){
+        header('Location: confirm.php');
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +58,7 @@
 <body>
 <div class="container">
   <h2>Sign Up</h2>
-  <form action="addUser.php">
+  <form method="POST" action="addUser.php">
     <div class="form-group">
       <label for="fName">First Name:</label>
       <input type="text" class="form-control" id="fName" placeholder="Enter First Name" name="fName">
