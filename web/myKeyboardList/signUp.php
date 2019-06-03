@@ -8,40 +8,55 @@
 </head>
 <body>
 <div class="container">
-  <h2>Sign Up</h2>
-  <form method="POST" action="addUser.php">
-    <div class="form-group">
-      <label for="fName">First Name:</label>
-      <input type="text" class="form-control" id="fName" placeholder="Enter First Name" name="fName">
-    </div>
+        <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Sign Up!</h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form method="POST" action="addUser.php">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" name="fName" id="fName" class="form-control input-sm" placeholder="First Name">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="text" name="lName" id="lName" class="form-control input-sm" placeholder="Last Name">
+			    					</div>
+			    				</div>
+			    			</div>
 
-    <div class="form-group">
-      <label for="lName">Last Name:</label>
-      <input type="text" class="form-control" id="lName" placeholder="Enter Last Name" name="lName">
-    </div>
+                            <div class="form-group">
+			    				<input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username">
+			    			</div>
 
-    <div class="form-group">
-      <label for="username">Username:</label>
-      <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username">
-    </div>
+			    			<div class="form-group">
+			    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+			    			</div>
 
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="pwd" id="pwd" class="form-control input-sm" placeholder="Password">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="rpt-password" id="rpt-password" class="form-control input-sm" placeholder="Confirm Password">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			
+			    			<input type="submit" name="signUp" value="signUp" class="btn btn-info btn-block">
+			    		
+			    		</form>
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
     </div>
-
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-    </div>
-
-    <div class="form-group">
-      <label for="rpt-pwd">Repeat Password:</label>
-      <input type="password" class="form-control" id="rpt-pwd" placeholder="Enter password" name="rpt-pwd">
-    </div>
-
-    <button type="submit" name="signUp" class="btn btn-default">Submit</button>
-  </form>
-</div>
 </body>
 </html>
