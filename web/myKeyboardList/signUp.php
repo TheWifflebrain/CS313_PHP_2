@@ -16,7 +16,7 @@
         		<div class="panel-heading">
 			    		<h3 class="panel-title">Sign Up!</h3>
 			 			</div>
-			 			<div class="panel-body">
+			 			<div>
 			    		<form method="POST" action="addUser.php">
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
@@ -31,7 +31,7 @@
 			    				</div>
 			    			</div>
 
-                            <div class="form-group">
+                <div class="form-group">
 			    				<input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username">
 			    			</div>
 
