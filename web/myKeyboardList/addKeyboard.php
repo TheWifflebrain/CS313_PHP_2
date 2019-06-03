@@ -20,7 +20,7 @@
     $stmt->bindValue(':type', $typeK, PDO::PARAM_STR);
     $stmt->bindValue(':forsale', $forsale, PDO::PARAM_STR);
     $stmt->bindValue(':desc', $descK, PDO::PARAM_STR);
-    $stmt->bindValue(':phot', $phot, PDO::PARAM_STR);
+    $stmt->bindValue(':photo', $phot, PDO::PARAM_STR);
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt->bindValue(':user', $user, PDO::PARAM_STR);
     $stmt->execute();
