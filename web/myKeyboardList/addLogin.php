@@ -21,14 +21,16 @@ if(isset($_POST['login'])){
             while ($row = $statement->fetch(PDO::FETCH_ASSOC))
             {
                 $checker=$row['passwordU'];
-                $pass=password_verify($password, $checker);
-                $count++;
+                //$password=password_verify($password, $checker);
+                $//count++;
+                $hashed_password=password_hash($password, PASSWORD_DEFAULT);
+                if($hashed_password == $checker){
+                    session_start();
+                    $_SESSION['loggedin'] = true;
+                    $_SESSION['username'] = $username;
+                }
             }
-            if(!$pass){
-                session_start();
-                $_SESSION['loggedin'] = true;
-                $_SESSION['username'] = $username;
-            }
+            
         }
         catch(Exception $ex)
         {
