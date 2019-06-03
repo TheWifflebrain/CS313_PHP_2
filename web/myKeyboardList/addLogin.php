@@ -24,7 +24,7 @@ if(isset($_POST['login'])){
                 $pass=password_verify($password, $checker);
                 $count++;
             }
-            if($password == password_verify($password, $checker)){
+            if($password == $row['passwordU']){
                 session_start();
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $username;
@@ -35,7 +35,7 @@ if(isset($_POST['login'])){
         catch(Exception $ex)
         {
             echo "Error with DB. Details: $ex";
-            header("Location: homepage.php?incorrectUsernameOrPassword");
+            header("Location: login.php?incorrectUsernameOrPassword");
             die();
         } 
     }   
