@@ -26,12 +26,13 @@
 
 			    			<div class="form-group">
 			    				<input type="password" name="pwd" id="pwd" class="form-control input-sm" placeholder="Password">
+							</div>
 			    			
 			    			<input type="submit" name="login" value="login" class="btn btn-info btn-block">
 			    		
 			    		</form>
-			    	</div>
-	    		</div>
+			    		</div>
+	    			</div>
     		</div>
     	</div>
     </div>
