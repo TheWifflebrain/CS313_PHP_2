@@ -21,7 +21,7 @@
     $stmt->bindValue(':forsale', $forsale, PDO::PARAM_STR);
     $stmt->bindValue(':descK', $descK, PDO::PARAM_STR);
     $stmt->bindValue(':photo', $phot, PDO::PARAM_STR);
-    $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+    $stmt->bindValue(':keyboardName', $name, PDO::PARAM_STR);
     $stmt->bindValue(':user', $user, PDO::PARAM_STR);
     $stmt->execute();
 
