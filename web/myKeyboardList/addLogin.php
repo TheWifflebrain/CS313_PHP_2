@@ -22,7 +22,7 @@ if(isset($_POST['login'])){
             {
                 $checker=$row['passwordU'];
                 $password=password_verify($password, $checker);
-                count++;
+                $count++;
             }
             if($pass){
                 session_start();
