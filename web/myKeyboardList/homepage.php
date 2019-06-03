@@ -6,7 +6,6 @@ if (!isset($_GET['username']))
 }
 $username = htmlspecialchars($_GET['username']);
 
-session_start();
 require('dbConnect.php');
 $db = get_db();
 $stmt = $db->prepare('SELECT k.*, p.* FROM keyboard k LEFT JOIN person p on k.username_K = p.username WHERE k.username_K=:user');

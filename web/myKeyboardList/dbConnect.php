@@ -31,3 +31,5 @@ function get_db() {
 	}
 	return $db;
 }
+
+session_start();

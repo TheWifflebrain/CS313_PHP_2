@@ -1,7 +1,6 @@
 <?php
 require('dbConnect.php');
 $db = get_db();
-session_start();
 $query = 'SELECT keyboard_id, switch, sizeK, typeK, forsale, descriptionK, photo, keyboard_name, username_K FROM keyboard';
 $stmt = $db->prepare($query);
 $stmt->execute();

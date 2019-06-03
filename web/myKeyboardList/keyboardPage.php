@@ -5,7 +5,6 @@ if (!isset($_GET['keyboard_id']))
 	die("Error, keyboard id not specified...");
 }
 $keyboard_id = htmlspecialchars($_GET['keyboard_id']);
-session_start();
 require('dbConnect.php');
 $db = get_db();
 $stmt = $db->prepare('SELECT k.*, c.* FROM keyboard k LEFT JOIN commentPost c ON k.keyboard_id = c.keyboard_id_CP WHERE c.keyboard_id_CP=:id');
