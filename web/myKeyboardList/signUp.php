@@ -11,7 +11,7 @@
 <body>
 <div class="container">
         <div class="row centered-form">
-        <div class="col-xs-12 col-sm-8 col-lg-8">
+        <div class="col-xs-12 col-sm-8 col-lg-12 centered-form">
         	<div class="panel panel-default">
         		<div class="panel-heading">
 			    		<h3 class="panel-title">Sign Up!</h3>
