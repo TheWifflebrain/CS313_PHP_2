@@ -22,6 +22,7 @@ if(isset($_POST['login'])){
             {
                 $checker=$row['passwordU'];
                 $pass=password_verify($password, $checker);
+                echo $pass;
                 $count++;
             }
             if($password == $row['passwordU']){
