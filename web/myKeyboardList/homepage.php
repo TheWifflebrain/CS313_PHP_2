@@ -94,7 +94,6 @@ foreach ($username_rows as $username_row)
 			 			<div class="panel-body">
 			    		<form method="POST" action="addKeyboard.php">
 			    		
-
               <div class="form-group">
 			    				<input type="text" name="keyboardName" id="keyboardName" class="form-control input-sm" placeholder="Keyboard Name" required>
 			    		</div>

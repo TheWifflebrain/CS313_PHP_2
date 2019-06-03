@@ -33,4 +33,4 @@ function get_db() {
 }
 
 session_start();
-$curr_username = $_SESSION['username'];
+//$curr_username = $_SESSION['username'];
