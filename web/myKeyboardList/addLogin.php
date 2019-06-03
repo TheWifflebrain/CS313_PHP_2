@@ -28,15 +28,16 @@ if(isset($_POST['login'])){
                 session_start();
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $username;
+                header("Location: homepage.php?username=$username");
+                die();
             }
         }
         catch(Exception $ex)
         {
             echo "Error with DB. Details: $ex";
             die();
-        }
-        header("Location: homepage.php?username=$username");
-        die(); 
+        } 
+        die();
     }   
 }
 ?>
