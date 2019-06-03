@@ -14,7 +14,7 @@ if(isset($_POST['login'])){
     }
     else{
         try{
-            $statement = $db->prepare("SELECT '$password' FROM person WHERE username ='$username'");
+            $statement = $db->prepare("SELECT passwordU FROM person WHERE username ='$username'");
             $statement->execute();
 
             $count=0;
@@ -23,6 +23,7 @@ if(isset($_POST['login'])){
                 $checker=$row['passwordU'];
                 $pass=password_verify($password, $checker);
                 $count++;
+                echo $count;
             }
             if($pass){
                 session_start();
@@ -35,9 +36,9 @@ if(isset($_POST['login'])){
         catch(Exception $ex)
         {
             echo "Error with DB. Details: $ex";
+            header("Location: homepage.php?incorrectUsernameOrPassword");
             die();
         } 
-        die();
     }   
 }
 ?>
