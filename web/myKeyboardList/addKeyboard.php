@@ -10,6 +10,7 @@
     $photo = htmlspecialchars($_POST['photo']);
     $name = htmlspecialchars($_POST['keyboardName']);
     $user = htmlspecialchars($_POST['username']);
+    echo $user;
 
     $stmt = $db->prepare('INSERT INTO keyboard(switch, sizeK, typeK, 
     forsale, descriptionK, photo, keyboard_name, username_K) VALUES (:switch, 
