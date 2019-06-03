@@ -56,7 +56,7 @@ if(isset($_POST['signUp'])){
             echo "Error connecting to DB. Details: $ex";
             die();
         }
-        header("Location: signUp.php");
+        header("Location: signUp.php?success!");
         die(); 
     }
 }
