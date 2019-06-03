@@ -14,7 +14,7 @@ if(isset($_POST['login'])){
     }
     else{
         try{
-            $statement = $db->prepare("SELECT passwordU FROM person WHERE username ='$username'");
+            $statement = $db->prepare("SELECT '$password' FROM person WHERE username ='$username'");
             $statement->execute();
 
             $count=0;
