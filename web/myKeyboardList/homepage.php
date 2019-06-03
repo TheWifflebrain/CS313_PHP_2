@@ -116,6 +116,7 @@ foreach ($username_rows as $username_row)
               <div class="form-group">
 			    				<input type="text" name="photo" id="photo" class="form-control input-sm" placeholder="Photo URL" required>
 			    		</div>
+              <input type="hidden" name="username_id" value="<?php echo $curr_username?>">
 			    			
 			    			<input type="submit" name="Add" value="Add" class="btn btn-info btn-block">
 			    		
