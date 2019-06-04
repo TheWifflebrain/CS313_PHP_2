@@ -7,9 +7,8 @@ if (!isset($_GET['keyboard_id']))
 $keyboard_id = htmlspecialchars($_GET['keyboard_id']);
 require('dbConnect.php');
 $db = get_db();
-$stmt->bindValue(':id', $keyboard_id, PDO::PARAM_INT);
 $stmt = $db->prepare('SELECT k.*, c.* FROM keyboard k LEFT JOIN commentPost c ON k.keyboard_id = c.keyboard_id_CP WHERE c.keyboard_id_CP=:id');
-//$stmt->bindValue(':id', $keyboard_id, PDO::PARAM_INT);
+$stmt->bindValue(':id', $keyboard_id, PDO::PARAM_INT);
 $stmt->execute();
 $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $keyboard_code = $keyboard_rows[0]['keyboard_name'];
