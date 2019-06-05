@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,14 +18,13 @@
 			 			</div>
 			 			<div class="panel-body">
 			    		<form method="POST" action="addLogin.php">
-			    		
-
+			    	
                 		<div class="form-group">
-			    				<input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username">
+			    				<input type="text" name="username" id="username" for="username" class="form-control input-sm" placeholder="Username">
 			    			</div>
 
 			    			<div class="form-group">
-			    				<input type="password" name="pwd" id="pwd" class="form-control input-sm" placeholder="Password">
+			    				<input type="password" name="pwd" id="pwd" for="pwd" class="form-control input-sm" placeholder="Password">
 							</div>
 			    			
 			    			<input type="submit" name="login" value="login" class="btn btn-info btn-block">
