@@ -69,7 +69,7 @@ if ($badLogin)
 			    		<h3 class="panel-title">Login!</h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form method="POST" action="addLogin.php">
+			    		<form method="POST" action="login.php">
 			    	
                 		<div class="form-group">
 			    				<input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username">
