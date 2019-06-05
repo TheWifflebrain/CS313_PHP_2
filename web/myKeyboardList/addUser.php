@@ -1,10 +1,5 @@
 <?php 
 if(isset($_POST['signUp'])){
-
-    session_start();
-    require "dbConnect.php";
-    $db = get_db();
- 
     $fName=$_POST['fName'];
     $lName=$_POST['lName'];
     $username=$_POST['username'];
@@ -13,51 +8,54 @@ if(isset($_POST['signUp'])){
     $rptpassword=$_POST['rpt-pwd'];
     $hashed_password=password_hash($password, PASSWORD_DEFAULT);
 
-    if($password == ""){
+    if(!isset($password) || $password == ""){
         header("Location: signUp.php?error=passwordcheck");
-        exit();
+        die();
     }
     else if($password !== $rptpassword){
         header("Location: signUp.php?error=passwordcheck&uid=".$username."&mail=".$email);
-        exit();
+        die();
     }
-    else if($fName == ""){
+    else if(!isset($fName) || $fName == ""){
         header("Location: signUp.php?error=FirstNamecheck");
-        exit();
+        die();
     }
-    else if($lName == ""){
+    else if(!isset($lName) || $lName == ""){
         header("Location: signUp.php?error=lastNamecheck");
-        exit();
+        die();
     }
-    else if($email == ""){
+    else if(!isset($email) || $email == ""){
         header("Location: signUp.php?error=emailcheck");
-        exit();
+        die();
     }
-    else if($username == ""){
+    else if(!isset($username) || $username == ""){
         header("Location: signUp.php?error=usernamecheck");
-        exit();
+        die();
     }
     
     else{
 
-        try{
-            $query = 'INSERT INTO person(fName, lName, email, username, passwordU) 
-                            VALUES(:fName, :lName, :email, :username, :passwordU)';
-            $statement =$db->prepare($query);
-            $statement->bindValue(':fName', $fName);
-            $statement->bindValue(':lName', $lName);
-            $statement->bindValue(':email', $email);
-            $statement->bindValue(':username', $username);
-            $statement->bindValue(':passwordU', $hashed_password);
-            $statement->execute();
-        }
-        catch(Exception $ex)
-        {
-            echo "Error connecting to DB. Details: $ex";
-            die();
-        }
-        header("Location: signUp.php?success!");
-        die(); 
+        $fName=htmlspecialchars($fName);
+        $lName=htmlspecialchars($lName);
+        $username=htmlspecialchars($username);
+        $email=htmlspecialchars($email);
+
+        require "dbConnect.php";
+        $db = get_db();
+
+        $query = 'INSERT INTO person(fName, lName, email, username, passwordU) 
+                        VALUES(:fName, :lName, :email, :username, :passwordU)';
+        $statement =$db->prepare($query);
+        $statement->bindValue(':fName', $fName);
+        $statement->bindValue(':lName', $lName);
+        $statement->bindValue(':email', $email);
+        $statement->bindValue(':username', $username);
+        $statement->bindValue(':passwordU', $hashed_password);
+        $statement->execute();
+
+        header("Location: listKeyboard.php");
+        die();
+ 
     }
 }
 ?>
