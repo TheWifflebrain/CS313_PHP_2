@@ -40,7 +40,7 @@ if(isset($_POST['signUp'])){
         $email=htmlspecialchars($email);
         $hashed_password=password_hash($password, PASSWORD_DEFAULT);
 
-        require "dbConnect.php";
+        require("dbConnect.php");
         $db = get_db();
 
         $query = 'INSERT INTO person(fName, lName, email, username, passwordU) 
