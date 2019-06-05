@@ -1,4 +1,5 @@
 <?php
+require("password.php");
 	session_start();
 	$badLogin = false;
 
