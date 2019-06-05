@@ -21,38 +21,38 @@
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-lg-6">
 			    					<div class="form-group">
-			                <input type="text" name="fName" id="fName" class="form-control input-sm" placeholder="First Name">
+			                <input type="text" name="fName" id="fName" for="fName" class="form-control input-sm" placeholder="First Name">
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-lg-6">
 			    					<div class="form-group">
-			    						<input type="text" name="lName" id="lName" class="form-control input-sm" placeholder="Last Name">
+			    						<input type="text" name="lName" id="lName" for="lName" class="form-control input-sm" placeholder="Last Name">
 			    					</div>
 			    				</div>
 			    			</div>
 
                 <div class="form-group">
-			    				<input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username">
+			    				<input type="text" name="username" id="username" for="username" class="form-control input-sm" placeholder="Username">
 			    			</div>
 
 			    			<div class="form-group">
-			    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+			    				<input type="email" name="email" id="email" for="email" class="form-control input-sm" placeholder="Email Address">
 			    			</div>
 
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-lg-6">
 			    					<div class="form-group">
-			    						<input type="password" name="pwd" id="pwd" class="form-control input-sm" placeholder="Password">
+			    						<input type="password" name="pwd" id="pwd" for="pwd" class="form-control input-sm" placeholder="Password">
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-lg-6">
 			    					<div class="form-group">
-			    						<input type="password" name="rpt-pwd" id="rpt-pwd" class="form-control input-sm" placeholder="Confirm Password">
+			    						<input type="password" name="rpt-pwd" id="rpt-pwd" for="rpt-pwd" class="form-control input-sm" placeholder="Confirm Password">
 			    					</div>
 			    				</div>
 			    			</div>
 			    			
-			    			<input type="submit" name="signUp" value="signUp" class="btn btn-info btn-block">
+			    			<input type="submit" name="signUp" value="signUp" for="signUp" class="btn btn-info btn-block">
 			    		
 			    		</form>
 			    	</div>
