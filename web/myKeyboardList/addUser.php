@@ -6,7 +6,6 @@ if(isset($_POST['signUp'])){
     $email=$_POST['email'];
     $password=$_POST['pwd'];
     $rptpassword=$_POST['rpt-pwd'];
-    $hashed_password=password_hash($password, PASSWORD_DEFAULT);
 
     if(!isset($password) || $password == ""){
         header("Location: signUp.php?error=passwordcheck");
@@ -39,6 +38,7 @@ if(isset($_POST['signUp'])){
         $lName=htmlspecialchars($lName);
         $username=htmlspecialchars($username);
         $email=htmlspecialchars($email);
+        $hashed_password=password_hash($password, PASSWORD_DEFAULT);
 
         require "dbConnect.php";
         $db = get_db();
