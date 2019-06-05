@@ -29,15 +29,12 @@
 			else
 			{
                 $badLogin = true;
-                header("Location: login.php?invalidcredentials");
-                die();
+            
 			}
 		}
 		else
 		{
             $badLogin = true;
-            header("Location: login.php?invalidcredentials");
-            die();
 		}
 	}
 ?>
