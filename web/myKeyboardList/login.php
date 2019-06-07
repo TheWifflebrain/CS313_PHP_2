@@ -56,13 +56,13 @@
 			if ($badLogin == 1)
 			{
 			?>
-				<span class="label label-warning">Incorrect password or username!</span><br/><br/>
+				<h3 class="bg-warning">Incorrect password or username</h3><br/><br/>
 			<?php
 			}			
 			if ($badLogin == 2)
 			{
 			?>
-				<span class="label label-warning">Cannot connect to database</span><br/><br/>
+				<h3 class="bg-warning">Cannot connect to database</h3><br/><br/>
 			<?php
 			}
 			?>
