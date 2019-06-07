@@ -18,7 +18,6 @@
 			$hashedPasswordFromDB = $row['passwordu'];
 			if (password_verify($password, $hashedPasswordFromDB))
 			{
-				echo "The hashed password is $hashedPasswordFromDB...";
 				$_SESSION['username'] = $username;
 				header("Location: frontpage.php");
 				die(); 
