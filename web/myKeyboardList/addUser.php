@@ -54,13 +54,13 @@ if(isset($_POST['signUp'])){
         $statement->execute();
 
         //logging in
-        $query = 'SELECT passwordU FROM person WHERE username=:username';
-		$statement = $db->prepare($query);
-		$statement->bindValue(':username', $username);
-		$result = $statement->execute();
+        $query2 = 'SELECT passwordU FROM person WHERE username=:username';
+		$statement2 = $db->prepare($query2);
+		$statement2->bindValue(':username', $username);
+		$result = $statement2->execute();
 		if ($result)
 		{
-			$row = $statement->fetch();
+			$row = $statement2->fetch();
 			$hashedPasswordFromDB = $row['passwordu'];
 			if (password_verify($password, $hashedPasswordFromDB))
 			{
