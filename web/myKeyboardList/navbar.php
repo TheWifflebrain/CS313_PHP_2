@@ -19,7 +19,7 @@
 			<a class="title nav-link" href="frontpage.php">Frontpage</a>
 		</li>
 		<li class="nav-item">
-			<a class="title nav-link" href="frontpage.php">Welcome <?php $username ?></a>
+			<a class="title nav-link" href="frontpage.php">Welcome <?php echo $username ?></a>
 		</li>
 		<li class="nav-item">
 			<a class="title nav-link" href="logout.php">Sign Out</a>
