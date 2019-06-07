@@ -1,5 +1,10 @@
 <?php
-
+	session_start();
+  $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+	if (isset($_SESSION['username']))
+	{
+		$usernameS = $_SESSION['username'];
+	}
 if (!isset($_GET['username']))
 {
 	die("Error, username not specified...");
@@ -81,8 +86,7 @@ foreach ($username_rows as $username_row)
     </div>
 <?php
 }
-$file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
-if ($file === "homepage.php?username='$username'")
+if ($file === "homepage.php?username='$usernameS'")
 {
 ?>
 <div class="container">
