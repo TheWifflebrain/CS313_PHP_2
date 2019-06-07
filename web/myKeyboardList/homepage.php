@@ -80,10 +80,11 @@ foreach ($username_rows as $username_row)
         </div>
     </div>
 <?php
-
 }
+$file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+if ($file === "homepage.php?username='$username'")
+{
 ?>
-
 <div class="container">
         <div class="row centered-form">
         <div class="col-xs-12 col-sm-8 col-lg-12 centered-form">
@@ -128,7 +129,8 @@ foreach ($username_rows as $username_row)
     		</div>
     	</div>
     </div>
-
-    
+    <?php
+    }
+    ?>
 </body>
 </html>

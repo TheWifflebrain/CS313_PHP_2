@@ -22,6 +22,9 @@
 			<a class="title nav-link" href="homepage.php?username=<?php echo $username ?>">Welcome, <?php echo $username ?></a>
 		</li>
 		<li class="nav-item">
+			<a class="title nav-link" href="inputKeyboard.php">Add Keyboard</a>
+		</li>
+		<li class="nav-item">
 			<a class="title nav-link" href="logout.php">Sign Out</a>
 		</li>
 	<ul>

@@ -7,7 +7,6 @@
 		// they have submitted a username and password for us to check
 		$username = $_POST['username'];
 		$password = $_POST['pwd'];
-		echo "The username is $username and the password is $password 123";
 		// Connect to the DB
 		require("dbConnect.php");
 		$db = get_db();
