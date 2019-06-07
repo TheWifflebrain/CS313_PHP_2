@@ -22,7 +22,7 @@ $keyboard_code = $keyboard_rows[0]['keyboard_name'];
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Keyboard Page</title>
 </head>
 <body>
 <?php
@@ -39,7 +39,6 @@ foreach ($keyboard_rows as $keyboard_row)
     $desc = $keyboard_row['descriptionk'];
     $photo = $keyboard_row['photo'];
     $name = $keyboard_row['keyboard_name'];
-    $comment = $keyboard_row['messagec'];
     $userK = $keyboard_row['username_k'];
 ?>
 <div class="border keyList">
