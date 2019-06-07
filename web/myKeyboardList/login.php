@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$badLogin = false;
+	$badLogin = 0;
 
 	if (isset($_POST['username']) && isset($_POST['pwd']))
 	{
@@ -56,13 +56,13 @@
 			if ($badLogin == 1)
 			{
 			?>
-				<span class="label label-warning panel-title">Incorrect password or username!</span><br/><br/>
+				<span class="label label-warning">Incorrect password or username!</span><br/><br/>
 			<?php
 			}			
 			if ($badLogin == 2)
 			{
 			?>
-				<span class="label label-warning panel-title">Cannot connect to database</span><br/><br/>
+				<span class="label label-warning">Cannot connect to database</span><br/><br/>
 			<?php
 			}
 			?>
