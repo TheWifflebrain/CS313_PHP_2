@@ -1,5 +1,5 @@
 <?php
-require("password.php");
+//require("password.php");
 	session_start();
 	$badLogin = false;
 
@@ -19,7 +19,7 @@ require("password.php");
 		{
 			$row = $statement->fetch();
 			$hashedPasswordFromDB = $row['passwordU'];
-			echo "The hashed password is $hashedPasswordFromDB";
+			echo "!!!The hashed password is $hashedPasswordFromDB";
 			// now check to see if the hashed password matches
 			if (password_verify($password, $hashedPasswordFromDB))
 			{
