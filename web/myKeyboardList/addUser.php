@@ -56,7 +56,7 @@ if(isset($_POST['signUp'])){
         $statement->bindValue(':passwordU', $hashed_password);
         $statement->execute();
 
-        header("Location: listKeyboard.php");
+        header("Location: frontpage.php");
         die();
  
     }
