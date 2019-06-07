@@ -8,7 +8,7 @@
 		$password = $_POST['pwd'];
 		require("dbConnect.php");
 		$db = get_db();
-		$query = 'SELECT passwordu FROM person WHERE username=:username';
+		$query = "SELECT passwordU FROM person WHERE username=':username'";
 		$statement = $db->prepare($query);
 		$statement->bindValue(':username', $username);
 		$result = $statement->execute();
