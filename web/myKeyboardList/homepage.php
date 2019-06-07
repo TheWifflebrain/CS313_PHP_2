@@ -18,6 +18,7 @@ $stmt->bindValue(':user', $username, PDO::PARAM_INT);
 $stmt->execute();
 $username_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $username_code = $username_rows[0]['username'];
+$user = $username_row['username_K'];
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +37,7 @@ $username_code = $username_rows[0]['username'];
 ?>
 
 <div class="jumbotron text-center jumbo">
-        <h1><?php echo $username; ?>'s Homepage</h1>
+        <h1><?php echo $user; ?>'s Homepage</h1>
 </div>
 <?php
 foreach ($username_rows as $username_row)
