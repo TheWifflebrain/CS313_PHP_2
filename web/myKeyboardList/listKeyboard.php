@@ -37,7 +37,7 @@ foreach ($db->query('SELECT * FROM keyboard ORDER BY keyboard_id DESC') as $row)
     $desc = $row['descriptionk'];
     $photo = $row['photo'];
     $name = $row['keyboard_name'];
-    $user = $row['username_K'];
+    $user = $row['username_k'];
 ?>
 <div class="border keyList">
     <div class="jumbotron text-center">
