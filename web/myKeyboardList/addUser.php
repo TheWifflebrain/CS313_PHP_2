@@ -38,6 +38,7 @@ if(isset($_POST['signUp'])){
         $lName=htmlspecialchars($lName);
         $username=htmlspecialchars($username);
         $email=htmlspecialchars($email);
+        $password=$_POST['pwd'];
         $hashed_password=password_hash($password, PASSWORD_DEFAULT);
 
         require("dbConnect.php");
@@ -60,6 +61,7 @@ if(isset($_POST['signUp'])){
 		$result = $statement2->execute();
 		if ($result)
 		{
+            echo "hello world";
 			$row = $statement2->fetch();
 			$hashedPasswordFromDB = $row['passwordu'];
 			if (password_verify($password, $hashedPasswordFromDB))
