@@ -1,5 +1,5 @@
 <?php 
-require("password.php");
+//require("password.php");
 //need to use another query to see if a user name is already in the database
 if(isset($_POST['signUp'])){
     $fName=$_POST['fName'];
