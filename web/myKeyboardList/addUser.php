@@ -1,6 +1,4 @@
 <?php 
-//require("password.php");
-//need to use another query to see if a user name is already in the database
 if(isset($_POST['signUp'])){
     $fName=$_POST['fName'];
     $lName=$_POST['lName'];
@@ -52,7 +50,6 @@ if(isset($_POST['signUp'])){
         $statement->bindValue(':lName', $lName);
         $statement->bindValue(':email', $email);
         $statement->bindValue(':username', $username);
-        echo "the hashed password is $hashed_password";
         $statement->bindValue(':passwordU', $hashed_password);
         $statement->execute();
 
