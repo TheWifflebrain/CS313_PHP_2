@@ -55,6 +55,7 @@ if(isset($_POST['signUp'])){
         $statement->execute();
 
         //logging in
+        session_start();
         $query2 = 'SELECT passwordU FROM person WHERE username=:username';
 		$statement2 = $db->prepare($query2);
 		$statement2->bindValue(':username', $username);
