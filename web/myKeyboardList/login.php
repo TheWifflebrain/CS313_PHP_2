@@ -19,6 +19,7 @@ require("password.php");
 		{
 			$row = $statement->fetch();
 			$hashedPasswordFromDB = $row['passwordU'];
+			echo $hashedPasswordFromDB;
 			// now check to see if the hashed password matches
 			if (password_verify($password, $hashedPasswordFromDB))
 			{
@@ -29,13 +30,13 @@ require("password.php");
 			}
 			else
 			{
-                $badLogin = true;
+                $badLogin = 1;
             
 			}
 		}
 		else
 		{
-            $badLogin = true;
+            $badLogin = 2;
 		}
 	}
 ?>
@@ -53,9 +54,14 @@ require("password.php");
 <body>
 <?php
 
-if ($badLogin)
+if ($badLogin == 1)
 {
-	echo "Incorrect username or password!<br /><br />\n";
+	echo "Incorrect password!<br /><br />\n";
+}
+
+if ($badLogin == 2)
+{
+	echo "cant connect to database<br /><br />\n";
 }
 ?>
 
