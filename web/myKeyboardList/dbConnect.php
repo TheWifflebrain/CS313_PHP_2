@@ -32,5 +32,5 @@ function get_db() {
 	return $db;
 }
 
-session_start();
+//session_start();
 //$curr_username = $_SESSION['username'];
