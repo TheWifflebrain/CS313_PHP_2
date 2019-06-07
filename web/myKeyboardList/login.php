@@ -51,12 +51,12 @@
 
 if ($badLogin == 1)
 {
-	echo "Incorrect password or username!<br /><br />\n";
+	echo "<span class=label label-warning>Incorrect password or username!</span><br /><br />\n";
 }
 
 if ($badLogin == 2)
 {
-	echo "Cannot connect to database<br /><br />\n";
+	echo "<span class=label label-warning>Cannot connect to database</span><br /><br />\n";
 }
 ?>
 
@@ -79,6 +79,8 @@ if ($badLogin == 2)
 			    			
 			    			<input type="submit" name="login" value="login" class="btn btn-info btn-block">	
 			    		</form>
+						<br/>
+						<br/>
 						<div>
 							<h4 class="panel-body">Don't have an account</h4>
 							<a href="signUp.php"><input type="submit" name="Sign Up" value="Sign Up" class="btn btn-info btn-block"></a>	
