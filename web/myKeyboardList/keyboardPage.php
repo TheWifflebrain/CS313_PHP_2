@@ -4,6 +4,7 @@ if (!isset($_GET['keyboard_id']))
 {
 	die("Error, keyboard id not specified...");
 }
+$check = 1;
 $keyboard_id = htmlspecialchars($_GET['keyboard_id']);
 require('dbConnect.php');
 $db = get_db();
@@ -12,6 +13,14 @@ $stmt->bindValue(':id', $keyboard_id, PDO::PARAM_INT);
 $stmt->execute();
 $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $keyboard_code = $keyboard_rows[0]['keyboard_name'];
+if(!$keyboard_rows){
+  $stmt = $db->prepare('SELECT * FROM keyboard WHERE keyboard_id=:id');
+  $stmt->bindValue(':id', $keyboard_id, PDO::PARAM_INT);
+  $stmt->execute();
+  $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $keyboard_code = $keyboard_rows[0]['keyboard_name'];
+  $check=0;
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +35,7 @@ $keyboard_code = $keyboard_rows[0]['keyboard_name'];
 </head>
 <body>
 <?php
-        require("navbar.php");
+    require("navbar.php");
 ?>
     
 <?php
@@ -81,9 +90,11 @@ break;
 }
 ?>
 
+<?php
+if($check == 1){
+?>
 
-
-    <div>
+<div>
          <h3 class="text-center">Comments</h3> 
     </div>
 <div class="container">           
@@ -105,6 +116,8 @@ break;
             </tbody>
           </table>
         </div>
-    
+<?php
+}
+?>
 </body>
 </html>
