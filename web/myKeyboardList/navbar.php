@@ -15,11 +15,11 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
 	<ul class="navbar-nav">
-		<li class="nav-item <?php if ($file === 'listKeyboard') echo 'active' ?>">
-			<a class="title nav-link" href="listKeyboard.php">Frontpage</a>
+		<li class="nav-item <?php if ($file === 'frontpage') echo 'active' ?>">
+			<a class="title nav-link" href="frontpage.php">Frontpage</a>
 		</li>
 		<li class="nav-item">
-			<a class="title nav-link" href="listKeyboard.php">Welcome <?php $username ?></a>
+			<a class="title nav-link" href="frontpage.php">Welcome <?php $username ?></a>
 		</li>
 		<li class="nav-item">
 			<a class="title nav-link" href="logout.php">Sign Out</a>

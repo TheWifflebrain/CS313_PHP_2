@@ -24,7 +24,7 @@ $keyboards = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
-<h1 class="jumbotron text-center jumbo">New Keyboards</h1>
+<h1 class="jumbotron text-center jumbo">Front Page</h1>
 
 <?php
 foreach ($db->query('SELECT * FROM keyboard ORDER BY keyboard_id DESC') as $row)

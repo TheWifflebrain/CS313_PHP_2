@@ -1,14 +1,11 @@
 <?php
-//require("password.php");
 	session_start();
 	$badLogin = false;
 
 	if (isset($_POST['username']) && isset($_POST['pwd']))
 	{
-		// they have submitted a username and password for us to check
 		$username = $_POST['username'];
 		$password = $_POST['pwd'];
-		// Connect to the DB
 		require("dbConnect.php");
 		$db = get_db();
 		$query = 'SELECT passwordu FROM person WHERE username=:username';
@@ -19,15 +16,12 @@
 		{
 			$row = $statement->fetch();
 			$hashedPasswordFromDB = $row['passwordu'];
-			echo "!!!The hashed password is $hashedPasswordFromDB";
-			// now check to see if the hashed password matches
 			if (password_verify($password, $hashedPasswordFromDB))
 			{
 				echo "The hashed password is $hashedPasswordFromDB...";
-				// password was correct, put the user on the session, and redirect to home
 				$_SESSION['username'] = $username;
-				header("Location: listKeyboard.php");
-				die(); // we always include a die after redirects.
+				header("Location: frontpage.php");
+				die(); 
 			}
 			else
 			{
@@ -57,12 +51,12 @@
 
 if ($badLogin == 1)
 {
-	echo "Incorrect password!<br /><br />\n";
+	echo "Incorrect password or username!<br /><br />\n";
 }
 
 if ($badLogin == 2)
 {
-	echo "cant connect to database<br /><br />\n";
+	echo "Cannot connect to database<br /><br />\n";
 }
 ?>
 
@@ -74,8 +68,7 @@ if ($badLogin == 2)
 			    		<h3 class="panel-title">Login!</h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form method="POST" action="login.php">
-			    	
+			    		<form method="POST" action="login.php">   	
                 		<div class="form-group">
 			    				<input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username">
 			    			</div>
@@ -84,10 +77,12 @@ if ($badLogin == 2)
 			    				<input type="password" name="pwd" id="pwd" class="form-control input-sm" placeholder="Password">
 							</div>
 			    			
-			    			<input type="submit" name="login" value="login" class="btn btn-info btn-block">
-
-			    		
+			    			<input type="submit" name="login" value="login" class="btn btn-info btn-block">	
 			    		</form>
+						<div>
+							<h4 class="panel-body">Don't have an account</h4>
+							<a href="signUp.php"><input type="submit" name="Sign Up" value="Sign Up" class="btn btn-info btn-block"></a>	
+						</div>
 			    		</div>
 	    			</div>
     		</div>
