@@ -26,7 +26,7 @@
     </div>
 
     <div>
-        <a class="text-center display-4" href="myKeyboardList/homepage.php">keyboard</a>
+        <a class="text-center display-4" href="myKeyboardList/frontpage.php">keyboard</a>
     </div>
     
 </body>
