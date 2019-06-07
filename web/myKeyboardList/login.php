@@ -23,6 +23,7 @@
 			// now check to see if the hashed password matches
 			if (password_verify($password, $hashedPasswordFromDB))
 			{
+				echo "The hashed password is $hashedPasswordFromDB...";
 				// password was correct, put the user on the session, and redirect to home
 				$_SESSION['username'] = $username;
 				header("Location: listKeyboard.php");
