@@ -11,14 +11,14 @@
 		// Connect to the DB
 		require("dbConnect.php");
 		$db = get_db();
-		$query = 'SELECT passwordU FROM person WHERE username=:username';
+		$query = 'SELECT passwordu FROM person WHERE username=:username';
 		$statement = $db->prepare($query);
 		$statement->bindValue(':username', $username);
 		$result = $statement->execute();
 		if ($result)
 		{
 			$row = $statement->fetch();
-			$hashedPasswordFromDB = $row['password'];
+			$hashedPasswordFromDB = $row['passwordu'];
 			echo "!!!The hashed password is $hashedPasswordFromDB";
 			// now check to see if the hashed password matches
 			if (password_verify($password, $hashedPasswordFromDB))
