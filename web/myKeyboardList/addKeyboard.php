@@ -26,9 +26,7 @@
     $stmt->bindValue(':user', $user, PDO::PARAM_STR);
     $stmt->execute();
 
-    $new_page = "homepage.php";
-
-    header("Location: $new_page");
+    header("Location: frontpage.php");
     die();
 ?>
 
