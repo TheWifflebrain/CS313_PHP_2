@@ -68,9 +68,10 @@ if(isset($_POST['signUp'])){
 				header("Location: frontpage.php");
 				die(); 
             }
-        else{
-            header("Location: signUp.php");
-            die();
+            else{
+                header("Location: signUp.php");
+                die();
+            }
         }
 
         header("Location: frontpage.php");
