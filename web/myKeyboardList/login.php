@@ -92,5 +92,8 @@
     		</div>
     	</div>
     </div>
+	<?php
+		$badLogin = 0;
+	?>
 </body>
 </html>
