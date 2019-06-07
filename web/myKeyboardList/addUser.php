@@ -73,10 +73,6 @@ if(isset($_POST['signUp'])){
                 die();
             }
         }
-
-        header("Location: frontpage.php");
-        die();
- 
     }
 }
 ?>
