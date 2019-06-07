@@ -53,6 +53,26 @@ if(isset($_POST['signUp'])){
         $statement->bindValue(':passwordU', $hashed_password);
         $statement->execute();
 
+        //logging in
+        $query = 'SELECT passwordu FROM person WHERE username=:username';
+		$statement = $db->prepare($query);
+		$statement->bindValue(':username', $username);
+		$result = $statement->execute();
+		if ($result)
+		{
+			$row = $statement->fetch();
+			$hashedPasswordFromDB = $row['passwordu'];
+			if (password_verify($password, $hashedPasswordFromDB))
+			{
+				$_SESSION['username'] = $username;
+				header("Location: frontpage.php");
+				die(); 
+            }
+        else{
+            header("Location: signUp.php");
+            die();
+        }
+
         header("Location: frontpage.php");
         die();
  
