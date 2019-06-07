@@ -47,23 +47,25 @@
     <title>Login</title>
 </head>
 <body>
-<?php
-
-if ($badLogin == 1)
-{
-	echo "<span class=label label-warning>Incorrect password or username!</span><br /><br />\n";
-}
-
-if ($badLogin == 2)
-{
-	echo "<span class=label label-warning>Cannot connect to database</span><br /><br />\n";
-}
-?>
 
 <div class="container">
         <div class="row centered-form">
         <div class="col-xs-12 col-sm-8 col-lg-12 centered-form">
         	<div class="panel panel-default">
+			<?php
+			if ($badLogin == 1)
+			{
+			?>
+				<span class="label label-warning panel-title">Incorrect password or username!</span><br/><br/>
+			<?php
+			}			
+			if ($badLogin == 2)
+			{
+			?>
+				<span class="label label-warning panel-title">Cannot connect to database</span><br/><br/>
+			<?php
+			}
+			?>
         		<div class="panel-heading">
 			    		<h3 class="panel-title">Login!</h3>
 			 			</div>
