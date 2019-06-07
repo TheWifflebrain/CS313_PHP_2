@@ -52,6 +52,7 @@ if(isset($_POST['signUp'])){
         $statement->bindValue(':lName', $lName);
         $statement->bindValue(':email', $email);
         $statement->bindValue(':username', $username);
+        echo "the hashed password is $hashed_password";
         $statement->bindValue(':passwordU', $hashed_password);
         $statement->execute();
 
