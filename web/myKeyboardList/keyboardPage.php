@@ -84,7 +84,7 @@ foreach ($keyboard_rows as $keyboard_row)
               </tr>
               <tr>
                 <?php if($userK == $usernameS){?>
-                  <input id="keyboardid" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">
+                  <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">
                   
                   <td><a href="editKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit" value="Edit" class="btn btn-info btn-block"></a></td>
                   <td><input onclick="doublecheck()" type="button" name="Remove" value="Remove" class="btn btn-info btn-block"></td>
