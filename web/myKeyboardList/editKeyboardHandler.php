@@ -12,7 +12,7 @@ require "dbConnect.php";
     $photo = htmlspecialchars($_POST['photo']);
     $name = htmlspecialchars($_POST['keyboardName']);
 
-    if(!isset($switch) || empty($switch)){
+    if(!isset($switch) || $switch == null){
         $stmt = $db->prepare('SELECT keyboard.switch FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
@@ -23,7 +23,7 @@ require "dbConnect.php";
         //echo $switch; 
     }
 
-    if(!isset($size) || empty($size)){
+    if(!isset($size) || $size==null){
         $stmt = $db->prepare('SELECT keyboard.sizeK FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
@@ -33,7 +33,7 @@ require "dbConnect.php";
         $size = $row['sizeK'];
     }
 
-    if(!isset($typeK) || empty($typeK)){
+    if(!isset($typeK) || $typeK==null){
         $stmt = $db->prepare('SELECT keyboard.typeK FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
@@ -53,7 +53,7 @@ require "dbConnect.php";
         $forsale = $row['forsale'];
     }
 
-    if(!isset($descK) || empty($descK)){
+    if(!isset($descK) || $descK==null){
         $stmt = $db->prepare('SELECT keyboard.descriptionK FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
@@ -64,7 +64,7 @@ require "dbConnect.php";
         $descK = $row['descriptionK'];
     }
 
-    if(!isset($photo) || empty($photo)){
+    if(!isset($photo) || $photo==null){
         $stmt = $db->prepare('SELECT keyboard.photo FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
@@ -74,7 +74,7 @@ require "dbConnect.php";
         $photo = $row['photo'];
     }
 
-    if(!isset($name) || empty($name)){
+    if(!isset($name) || $name==null){
         $stmt = $db->prepare('SELECT keyboard.keyboard_name FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();

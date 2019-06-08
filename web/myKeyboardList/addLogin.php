@@ -18,7 +18,6 @@
 		{
 			$row = $statement->fetch();
 			$hashedPasswordFromDB = $row['passwordU'];
-			echo  "The hashed password is $hashedPasswordFromDB 123";
 			// now check to see if the hashed password matches
 			if (password_verify($password, $hashedPasswordFromDB))
 			{
