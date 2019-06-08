@@ -88,7 +88,6 @@ foreach ($keyboard_rows as $keyboard_row)
                   <td><a href="editKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit" value="Edit" class="btn btn-info btn-block"></a></td>
                   <td><input onclick="doublecheck()" type="button" name="Remove" value="Remove" class="btn btn-info btn-block"></td>
                 <?php } ?>
-                <p id="demo"></p>
               </tr>
             </tbody>
           </table>
