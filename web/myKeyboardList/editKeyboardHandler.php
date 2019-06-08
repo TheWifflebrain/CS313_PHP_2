@@ -23,7 +23,6 @@ require "dbConnect.php";
     $stmt->bindValue(':descK', $descK, PDO::PARAM_STR);
     $stmt->bindValue(':photo', $photo, PDO::PARAM_STR);
     $stmt->bindValue(':keyboardName', $name, PDO::PARAM_STR);
-    $stmt->bindValue(':user', $user, PDO::PARAM_STR);
     $stmt->execute();
 
     header("Location: homepgage.php?username=$usernameS");
