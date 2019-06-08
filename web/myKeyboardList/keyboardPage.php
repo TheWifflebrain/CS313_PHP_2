@@ -127,8 +127,8 @@ if($check == 1){
                     </tr>
                     <?php if($userCP == $usernameS){?>
                   <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
-                  <td><a href="removeCommentHandler.php?comment_id=<?php echo $cID; ?>?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit" value="Edit" class="btn btn-info btn-block"></a></td>
-                  <td><input onclick="doublecheckComment()" type="button" name="Remove" value="Remove" class="btn btn-info btn-block"></td>
+                  <td><a href="editComment.php?comment_id=<?php echo $cID; ?>?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit" value="Edit" class="btn btn-info btn-block"></a></td>
+                  <td><input onclick="doublecheck2()" type="button" name="Remove" value="Remove" class="btn btn-info btn-block"></td>
                 <?php } ?>
                     
                 <?php
