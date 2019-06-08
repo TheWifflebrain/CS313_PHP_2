@@ -121,16 +121,16 @@ if($check == 1){
                 <?php
                 }
                 ?>
-                <tr>
-                  <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
-                  <td><a href="addcomment.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Comment" value="Comment" class="btn btn-info btn-block"></a></td>
-              </tr>
             </tbody>
           </table>
         </div>
 <?php
 }
 ?>
+                <div>
+                  <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
+                  <td><a href="addcomment.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Add Comment" value="Add Comment" class="btn btn-info btn-block"></a></td>
+              </div>
 <script type="text/javascript" src="doublecheck.js"></script>
 </body>
 </html>
