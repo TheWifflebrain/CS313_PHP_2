@@ -124,6 +124,7 @@ if($check == 1){
                     <td><?php echo $comment; ?></td>
                     <td><a href="homepage.php?username=<?php echo $userCP ?>"><?php echo $userCP; ?></a></td>
                     </tr>
+                    
                 <?php
                 }
                 ?>
