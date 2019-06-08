@@ -16,19 +16,14 @@ require "dbConnect.php";
         $stmt = $db->prepare('SELECT keyboard.switch FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
-        //$keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         $row = $stmt->fetch();
         $switch = $row['switch'];   
-        //echo $switch; 
     }
 
     if(!isset($size) || $size==null){
         $stmt = $db->prepare('SELECT keyboard.sizeK FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
-        //$keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         $row = $stmt->fetch();
         $size = $row['sizek'];
     }
@@ -37,8 +32,6 @@ require "dbConnect.php";
         $stmt = $db->prepare('SELECT keyboard.typeK FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
-        //$keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         $row = $stmt->fetch();
         $typeK = $row['typek'];
     }
@@ -47,8 +40,6 @@ require "dbConnect.php";
         $stmt = $db->prepare('SELECT keyboard.forsale FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
-        //$keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         $row = $stmt->fetch();
         $forsale = $row['forsale'];
     }
@@ -57,9 +48,6 @@ require "dbConnect.php";
         $stmt = $db->prepare('SELECT keyboard.descriptionK FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
-        //$keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
-        //$descK = $keyboard_rows['descriptionK'];
         $row = $stmt->fetch();
         $descK = $row['descriptionk'];
     }
@@ -68,8 +56,6 @@ require "dbConnect.php";
         $stmt = $db->prepare('SELECT keyboard.photo FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
-        //$keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         $row = $stmt->fetch();
         $photo = $row['photo'];
     }
@@ -78,10 +64,6 @@ require "dbConnect.php";
         $stmt = $db->prepare('SELECT keyboard.keyboard_name FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
-        //$keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
-        //$name = $keyboard_rows['keyboard_name'];
-
         $row = $stmt->fetch();
         $name = $row['keyboard_name'];
     }
@@ -102,6 +84,6 @@ require "dbConnect.php";
     $stmt->bindValue(':keyboardName', $name, PDO::PARAM_STR);
     $stmt->execute();
 
-    header("Location: homepage.php?username=$usernameS");
+    header("Location: homepage.php?username=$user");
     die();
 ?>
