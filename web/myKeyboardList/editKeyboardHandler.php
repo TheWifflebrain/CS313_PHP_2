@@ -4,7 +4,6 @@ require "dbConnect.php";
     $keyID = htmlspecialchars($_GET['keyboard_id']);
     $user = htmlspecialchars($_POST['username_id']);
 
-
     $switch = htmlspecialchars($_POST['switch']);
     $size = htmlspecialchars($_POST['size']);
     $typeK = htmlspecialchars($_POST['type']);
@@ -19,7 +18,9 @@ require "dbConnect.php";
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
-        $switch = $keyboard_rows['switch'];    }
+        $switch = $keyboard_rows['switch'];   
+        echo $switch; 
+    }
 
     if(!isset($size) || empty($size)){
         $stmt = $db->prepare('SELECT keyboard.sizeK FROM keyboard WHERE keyboard_id=:id');
@@ -66,7 +67,7 @@ require "dbConnect.php";
         $photo = $keyboard_rows['photo'];
     }
 
-    if(!isset($name) || empty($name)){
+    if(!isset($name) || $name)){
         $stmt = $db->prepare('SELECT keyboard.keyboard_name FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
