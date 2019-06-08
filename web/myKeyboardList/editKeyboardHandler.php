@@ -1,8 +1,7 @@
 <?php
 require "dbConnect.php";
     $db = get_db();
-    $keyID = htmlspecialchars($_GET['keyID']);
-
+    $keyID = htmlspecialchars($_GET['keyboard_id']);
     $switch = htmlspecialchars($_POST['switch']);
     $size = htmlspecialchars($_POST['size']);
     $typeK = htmlspecialchars($_POST['type']);
@@ -13,7 +12,7 @@ require "dbConnect.php";
     $user = htmlspecialchars($_POST['username_id']);
 
     $stmt = $db->prepare("UPDATE keyboard
-    SET switch='$switch', size='$size', type='$type',forsale='$forsale', descriptionK='$desck', photo='$photo', name='$name'
+    SET switch='$switch', sizeK='$size', typeK='$type',forsale='$forsale', descriptionK='$desck', photo='$photo', keyboard_name='$name'
     WHERE keyboard_id=$keyID;");
 
     $stmt->bindValue(':switch', $switch, PDO::PARAM_STR);

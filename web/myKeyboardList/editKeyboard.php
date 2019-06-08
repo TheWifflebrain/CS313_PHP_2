@@ -5,6 +5,7 @@ if (isset($_SESSION['username']))
 {
     $usernameS = $_SESSION['username'];
 }
+$keyID = htmlspecialchars($_GET['keyID']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +52,7 @@ if (isset($_SESSION['username']))
                                     <input type="text" name="photo" id="photo" class="form-control input-sm" placeholder="Photo URL" required>
                             </div>
                             <input type="hidden" name="username_id" value="<?php echo $usernameS?>">
-                                
+                            <input type="hidden" name="keyboard_id" value="<?php echo $keyID?>">
                             <input type="submit" name="Add" value="Add" class="btn btn-info btn-block">
 			    		</form>
 			    		</div>
