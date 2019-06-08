@@ -137,7 +137,11 @@ if($check == 1){
                   <table class="table table-striped">
                     <tbody>
                       <tr>
-                      <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
+                      <input type="text" name="commentC" id="commentC" class="form-control input-sm" placeholder="Add Comment" required>
+                      </tr>
+                      <tr>
+                      <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>"> 
+                      <input id="userCP" type="hidden" name="userCP" value="<?php echo $usernameS; ?>">      
                       <td><a href="addcomment.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Add Comment" value="Add Comment" class="btn btn-info btn-block"></a></td>
                       </tr>
                   </table>
