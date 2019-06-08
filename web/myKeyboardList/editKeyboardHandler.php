@@ -12,7 +12,8 @@ require "dbConnect.php";
     $user = htmlspecialchars($_POST['username_id']);
 
     $stmt = $db->prepare("UPDATE keyboard
-    SET switch='$switch', sizeK='$size', typeK='$type',forsale='$forsale', descriptionK='$desck', photo='$photo', keyboard_name='$name'
+    SET switch=:switch, sizeK=:size, typeK=:typeK,forsale=:forsale, descriptionK=:descK,
+     photo=:photo, keyboard_name=:keyboardName
     WHERE keyboard_id=$keyID;");
 
     $stmt->bindValue(':switch', $switch, PDO::PARAM_STR);
