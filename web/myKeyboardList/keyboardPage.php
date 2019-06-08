@@ -83,9 +83,10 @@ foreach ($keyboard_rows as $keyboard_row)
               </tr>
               <tr>
                 <?php if($userK == $usernameS){?>
-                <td>Edit</td>
-                <td>Remove</td>
+                <td><a href="editKeyboard.php"><input type="submit" name="Edit" value="Edit" class="btn btn-info btn-block"></a></td>
+                <td><a href="removeKeyboard.php"><input type="submit" name="Remove" value="Remove" class="btn btn-info btn-block"></a></td>
                 <?php } ?>
+              </tr>
             </tbody>
           </table>
         </div>
