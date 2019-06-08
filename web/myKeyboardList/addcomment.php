@@ -3,7 +3,7 @@
     $db = get_db();
 
     $username = htmlspecialchars($_POST['userCP']);
-    $keyID = htmlspecialchars($_POST['keyID']);
+    $keyID = htmlspecialchars($_GET['keyID']);
     $messageC = htmlspecialchars($_POST['commentC']);
 
     $stmt = $db->prepare('INSERT INTO commentPost(keyboard_id_CP,
