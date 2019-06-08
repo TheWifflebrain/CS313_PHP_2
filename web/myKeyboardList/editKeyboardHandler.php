@@ -30,7 +30,7 @@ require "dbConnect.php";
         //$keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         $row = $stmt->fetch();
-        $size = $row['sizeK'];
+        $size = $row['sizek'];
     }
 
     if(!isset($typeK) || $typeK==null){
@@ -40,7 +40,7 @@ require "dbConnect.php";
         //$keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         $row = $stmt->fetch();
-        $typeK = $row['typeK'];
+        $typeK = $row['typek'];
     }
 
     if(!isset($forsale) || empty($forsale)){
@@ -61,7 +61,7 @@ require "dbConnect.php";
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         //$descK = $keyboard_rows['descriptionK'];
         $row = $stmt->fetch();
-        $descK = $row['descriptionK'];
+        $descK = $row['descriptionk'];
     }
 
     if(!isset($photo) || $photo==null){
