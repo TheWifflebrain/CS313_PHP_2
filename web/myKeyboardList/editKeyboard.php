@@ -5,7 +5,7 @@ if (isset($_SESSION['username']))
 {
     $usernameS = $_SESSION['username'];
 }
-$keyID = htmlspecialchars($_GET['keyID']);
+$keyID = htmlspecialchars($_GET['keyboard_id']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
