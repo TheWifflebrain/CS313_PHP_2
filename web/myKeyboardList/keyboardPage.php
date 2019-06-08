@@ -124,7 +124,7 @@ if($check == 1){
                     <td><?php echo $comment; ?></td>
                     <td><a href="homepage.php?username=<?php echo $userCP ?>"><?php echo $userCP; ?></a></td>
                     </tr>
-                    <?php if($userK == $usernameS){?>
+                    <?php if($userCP == $usernameS){?>
                   <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
                   <td><a href="editKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit" value="Edit" class="btn btn-info btn-block"></a></td>
                   <td><input onclick="doublecheck()" type="button" name="Remove" value="Remove" class="btn btn-info btn-block"></td>
