@@ -7,7 +7,7 @@ if (isset($_SESSION['username']))
     require "dbConnect.php";
     $db = get_db();
 
-    $keyID = htmlspecialchars($_GET['keyID']);
+    $keyID = htmlspecialchars($_GET['keyboard_id']);
     $messageC = htmlspecialchars($_POST['commentC']);
 
     $stmt = $db->prepare('INSERT INTO commentPost(keyboard_id_CP,
