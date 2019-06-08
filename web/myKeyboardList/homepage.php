@@ -1,5 +1,4 @@
 <?php
-    require("navbar.php");
   $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 	if (isset($_SESSION['username']))
 	{
@@ -18,6 +17,9 @@ $stmt->bindValue(':user', $username, PDO::PARAM_INT);
 $stmt->execute();
 $username_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $username_code = $username_rows[0]['username'];
+?>
+<?php
+require("navbar.php");
 ?>
 
 <!DOCTYPE html>
