@@ -159,6 +159,5 @@ if($check == 1){
               </div>
             </form>
 <script type="text/javascript" src="doublecheck.js"></script>
-<script type="text/javascript" src="doublecheckComment.js"></script>
 </body>
 </html>
