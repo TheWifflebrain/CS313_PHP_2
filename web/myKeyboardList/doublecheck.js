@@ -8,3 +8,4 @@ function doublecheck(){
     }
     document.getElementById("demo").innerHTML = txt;
 }
+//<a href="removeKeyboard.php?keyboard_id=<?php echo $keyID; ?>
