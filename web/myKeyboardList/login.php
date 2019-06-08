@@ -87,7 +87,7 @@
 							<a href="signUp.php"><input type="submit" name="Sign Up" value="Sign Up" class="btn btn-info btn-block"></a>	
 						</div>
 						<div>
-							<h6 class="panel-body">You need to have an account to view this website</h6>	
+							<h6 class="panel-body">*You need to have an account to view this website</h6>	
 						</div>
 			    		</div>
 	    			</div>
