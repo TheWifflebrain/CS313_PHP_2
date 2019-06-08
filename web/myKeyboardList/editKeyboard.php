@@ -14,9 +14,12 @@ if (isset($_SESSION['username']))
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Edit</title>
 </head>
 <body>
+<?php
+        require("navbar.php");
+?>
 <div class="container">
         <div class="row centered-form">
         <div class="col-xs-12 col-sm-8 col-lg-12 centered-form">
@@ -25,7 +28,7 @@ if (isset($_SESSION['username']))
 			    		<h3 class="panel-title">Edit Keyboard</h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form method="POST" action="addKeyboard.php">
+			    		<form method="POST" action="editKeyboard.php">
                             <div class="form-group">
                                     <input type="text" name="keyboardName" id="keyboardName" class="form-control input-sm" placeholder="Keyboard Name" required>
                             </div>
