@@ -133,20 +133,24 @@ if($check == 1){
 <?php
 }
 ?>
+              <form method="POST" action="addcomment.php?keyboard_id=<?php echo $keyID; ?>">           
                 <div class="container">
                   <table class="table table-striped">
                     <tbody>
                       <tr>
-                      <input type="text" name="commentC" id="commentC" class="form-control input-sm" placeholder="Add Comment" required>
+                        <div class="form-group">
+                            <input type="text" name="commentC" id="commentC" class="form-control input-sm" placeholder="Add Comment" required>
+                          </div>
                       </tr>
                       <tr>
                       <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>"> 
-                      <input id="userCP" type="hidden" name="userCP" value="<?php echo $usernameS; ?>">      
-                      <td><a href="addcomment.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Add Comment" value="Add Comment" class="btn btn-info btn-block"></a></td>
+                      <input id="userCP" type="hidden" name="userCP" value="<?php echo $usernameS; ?>">     
+                      <td><input type="submit" name="Add" value="Add" class="btn btn-info btn-block"></td>
                       </tr>
                   </table>
                 </tbody>
               </div>
+            </form>
 <script type="text/javascript" src="doublecheck.js"></script>
 </body>
 </html>

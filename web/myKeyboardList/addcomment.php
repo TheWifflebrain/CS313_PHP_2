@@ -1,8 +1,12 @@
 <?php
+session_start();
+if (isset($_SESSION['username']))
+{
+    $usernameS = $_SESSION['username'];
+}
     require "dbConnect.php";
     $db = get_db();
 
-    $username = htmlspecialchars($_POST['userCP']);
     $keyID = htmlspecialchars($_GET['keyID']);
     $messageC = htmlspecialchars($_POST['commentC']);
 
@@ -10,7 +14,7 @@
     username_CP, messageC) VALUES (:keyID, :username, :messageC);');
 
     $stmt->bindValue(':keyID', $keyID, PDO::PARAM_INT);
-    $stmt->bindValue(':username', $username, PDO::PARAM_STR);
+    $stmt->bindValue(':username', $usernameS, PDO::PARAM_STR);
     $stmt->bindValue(':messageC', $messageC, PDO::PARAM_STR);
     $stmt->execute();
 
