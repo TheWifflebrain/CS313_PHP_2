@@ -49,6 +49,7 @@ foreach ($keyboard_rows as $keyboard_row)
     $photo = $keyboard_row['photo'];
     $name = $keyboard_row['keyboard_name'];
     $userK = $keyboard_row['username_k'];
+    $keyID = $keyboard_row['keyboard_id'];
 ?>
 <div class="border keyList">
     <div class="jumbotron text-center">
@@ -83,7 +84,7 @@ foreach ($keyboard_rows as $keyboard_row)
               </tr>
               <tr>
                 <?php if($userK == $usernameS){?>
-                <td><a href="editKeyboard.php"><input type="submit" name="Edit" value="Edit" class="btn btn-info btn-block"></a></td>
+                <td><a href="editKeyboard.php?<?php echo $keyID; ?>"><input type="submit" name="Edit" value="<?php echo $keyID; ?>" class="btn btn-info btn-block"></a></td>
                 <td><a href="removeKeyboard.php"><input type="submit" name="Remove" value="Remove" class="btn btn-info btn-block"></a></td>
                 <?php } ?>
               </tr>
