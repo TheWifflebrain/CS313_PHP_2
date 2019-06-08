@@ -25,6 +25,6 @@ require "dbConnect.php";
     $stmt->bindValue(':keyboardName', $name, PDO::PARAM_STR);
     $stmt->execute();
 
-    header("Location: homepgage.php?username=$usernameS");
+    header("Location: frontpage.php?username=$usernameS");
     die();
 ?>
