@@ -127,9 +127,15 @@ if($check == 1){
 <?php
 }
 ?>
-                <div>
-                  <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
-                  <td><a href="addcomment.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Add Comment" value="Add Comment" class="btn btn-info btn-block"></a></td>
+                <div class="container">
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                      <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
+                      <td><a href="addcomment.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Add Comment" value="Add Comment" class="btn btn-info btn-block"></a></td>
+                      </tr>
+                  </table>
+                </tbody>
               </div>
 <script type="text/javascript" src="doublecheck.js"></script>
 </body>
