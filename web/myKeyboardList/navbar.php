@@ -19,7 +19,7 @@
 			<a class="title nav-link" href="frontpage.php">Frontpage</a>
 		</li>
 		<li class="nav-item">
-			<a class="title nav-link" href="homepage.php?username=<?php echo $username ?>">Welcome, <?php echo $username ?></a>
+			<a class="title nav-link" href="homepage.php?username=<?php echo $usernameS ?>">Welcome, <?php echo $usernameS ?></a>
 		</li>
 		<li class="nav-item">
 			<a class="title nav-link" href="inputKeyboard.php">Add Keyboard</a>
