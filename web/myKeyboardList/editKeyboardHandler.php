@@ -13,63 +13,62 @@ require "dbConnect.php";
     $photo = htmlspecialchars($_POST['photo']);
     $name = htmlspecialchars($_POST['keyboardName']);
 
-    if(!isset($switch) || trim($switch) == ""){
+    if(!isset($switch) || empty($switch)){
         $stmt = $db->prepare('SELECT keyboard.switch FROM keyboard WHERE keyboard_id=:id');
-        $stmt->bindValue(':id', $keyID, PDO::PARAM_INT);
+        $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
-        $switch = $keyboard_rows['switch'];
-    }
+        $switch = $keyboard_rows['switch'];    }
 
-    if(!isset($size) || trim($size) == ""){
+    if(!isset($size) || empty($size)){
         $stmt = $db->prepare('SELECT keyboard.sizeK FROM keyboard WHERE keyboard_id=:id');
-        $stmt->bindValue(':id', $keyID, PDO::PARAM_INT);
+        $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         $size = $keyboard_rows['sizeK'];
     }
 
-    if(!isset($typeK) || trim($typeK) == ""){
+    if(!isset($typeK) || empty($typeK)){
         $stmt = $db->prepare('SELECT keyboard.typeK FROM keyboard WHERE keyboard_id=:id');
-        $stmt->bindValue(':id', $keyID, PDO::PARAM_INT);
+        $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         $typeK = $keyboard_rows['typeK'];
     }
 
-    if(!isset($forsale) || trim($forsale) == ""){
+    if(!isset($forsale) || empty($forsale)){
         $stmt = $db->prepare('SELECT keyboard.forsale FROM keyboard WHERE keyboard_id=:id');
-        $stmt->bindValue(':id', $keyID, PDO::PARAM_INT);
+        $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         $forsale = $keyboard_rows['forsale'];
     }
 
-    if(!isset($descK) || trim($descK) == ""){
+    if(!isset($descK) || empty($descK)){
         $stmt = $db->prepare('SELECT keyboard.descriptionK FROM keyboard WHERE keyboard_id=:id');
-        $stmt->bindValue(':id', $keyID, PDO::PARAM_INT);
+        $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         $descK = $keyboard_rows['descriptionK'];
     }
 
-    if(!isset($photo) || trim($photo) == ""){
+    if(!isset($photo) || empty($photo)){
         $stmt = $db->prepare('SELECT keyboard.photo FROM keyboard WHERE keyboard_id=:id');
-        $stmt->bindValue(':id', $keyID, PDO::PARAM_INT);
+        $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
         $photo = $keyboard_rows['photo'];
     }
 
-    if(!isset($name) || trim($name) == ""){
+    if(!isset($name) || empty($name)){
         $stmt = $db->prepare('SELECT keyboard.keyboard_name FROM keyboard WHERE keyboard_id=:id');
-        $stmt->bindValue(':id', $keyID, PDO::PARAM_INT);
+        $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
