@@ -18,9 +18,6 @@ $stmt->execute();
 $username_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $username_code = $username_rows[0]['username'];
 ?>
-<?php
-require("navbar.php");
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +30,9 @@ require("navbar.php");
     <title>Homepage</title>
 </head>
 <body>
-
+<?php
+require("navbar.php");
+?>
 <div class="jumbotron text-center jumbo">
         <h1><?php echo $username; ?>'s Homepage</h1>
 </div>

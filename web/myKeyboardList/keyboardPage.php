@@ -82,9 +82,10 @@ foreach ($keyboard_rows as $keyboard_row)
                 <td><?php echo $forsale; ?></td>
               </tr>
               <tr>
-                <td><?php if($userK == $usernameS){?>
-                    EDIT
-                </td><?php } ?>
+                <?php if($userK == $usernameS){?>
+                <td>Edit</td>
+                <td>Remove</td>
+                <?php } ?>
             </tbody>
           </table>
         </div>
