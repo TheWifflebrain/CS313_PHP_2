@@ -82,13 +82,6 @@ foreach ($keyboard_rows as $keyboard_row)
                 <td><?php echo $size; ?></td>
                 <td><?php echo $forsale; ?></td>
               </tr>
-              <tr>
-                <?php if($userK == $usernameS){?>
-                  <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
-                  <td><a href="editKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit" value="Edit" class="btn btn-info btn-block"></a></td>
-                  <td><input onclick="doublecheck()" type="button" name="Remove" value="Remove" class="btn btn-info btn-block"></td>
-                <?php } ?>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -97,6 +90,19 @@ foreach ($keyboard_rows as $keyboard_row)
 break;
 }
 ?>
+          <div class="container">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                <?php if($userK == $usernameS){?>
+                  <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
+                  <td><a href="editKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit" value="Edit" class="btn btn-info btn-block"></a></td>
+                  <td><input onclick="doublecheck()" type="button" name="Remove" value="Remove" class="btn btn-info btn-block"></td>
+                <?php } ?>
+                </tr>
+              </table>
+            </tbody>
+          </div>
 
 <?php
 if($check == 1){
