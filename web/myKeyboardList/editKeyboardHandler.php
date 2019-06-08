@@ -19,7 +19,7 @@ require "dbConnect.php";
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
-        $switch = $keyboard_row['switch'];
+        $switch = $keyboard_rows['switch'];
     }
 
     if(!isset($size) || trim($size) == ""){
@@ -28,7 +28,7 @@ require "dbConnect.php";
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
-        $size = $keyboard_row['sizeK'];
+        $size = $keyboard_rows['sizeK'];
     }
 
     if(!isset($typeK) || trim($typeK) == ""){
@@ -37,7 +37,7 @@ require "dbConnect.php";
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
-        $typeK = $keyboard_row['typeK'];
+        $typeK = $keyboard_rows['typeK'];
     }
 
     if(!isset($forsale) || trim($forsale) == ""){
@@ -46,7 +46,7 @@ require "dbConnect.php";
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
-        $forsale = $keyboard_row['forsale'];
+        $forsale = $keyboard_rows['forsale'];
     }
 
     if(!isset($descK) || trim($descK) == ""){
@@ -55,7 +55,7 @@ require "dbConnect.php";
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
-        $descK = $keyboard_row['descriptionK'];
+        $descK = $keyboard_rows['descriptionK'];
     }
 
     if(!isset($photo) || trim($photo) == ""){
@@ -64,7 +64,7 @@ require "dbConnect.php";
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
-        $photo = $keyboard_row['photo'];
+        $photo = $keyboard_rows['photo'];
     }
 
     if(!isset($name) || trim($name) == ""){
@@ -73,7 +73,7 @@ require "dbConnect.php";
         $stmt->execute();
         $keyboard_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //$keyboard_code = $keyboard_rows[0]['keyboard_name'];
-        $name = $keyboard_row['keyboard_name'];
+        $name = $keyboard_rows['keyboard_name'];
     }
 
 

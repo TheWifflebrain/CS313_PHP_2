@@ -56,7 +56,7 @@ $keyID = htmlspecialchars($_GET['keyboard_id']);
                             <input type="submit" name="Add" value="Add" class="btn btn-info btn-block">
 			    		</form>
 			    		</div>
-                        <p class="panel-title">If you leave fields blank then it will keep your previous entry.</p>
+                        <p class="panel-title">*If you leave fields blank then it will keep your previous entry</p>
 	    			</div>
     		</div>
     	</div>
