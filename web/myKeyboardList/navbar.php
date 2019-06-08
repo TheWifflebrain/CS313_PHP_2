@@ -4,7 +4,7 @@
 
 	if (isset($_SESSION['username']))
 	{
-		$username = $_SESSION['username'];
+		$usernameS = $_SESSION['username'];
 	}
 	else
 	{
@@ -23,6 +23,9 @@
 		</li>
 		<li class="nav-item">
 			<a class="title nav-link" href="inputKeyboard.php">Add Keyboard</a>
+		</li>
+		<li class="nav-item">
+			<a class="title nav-link" href="editKeyboard.php">Edit Your Keyboard</a>
 		</li>
 		<li class="nav-item">
 			<a class="title nav-link" href="logout.php">Sign Out</a>
