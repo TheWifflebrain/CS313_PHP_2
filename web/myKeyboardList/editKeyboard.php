@@ -29,7 +29,7 @@ $keyID = htmlspecialchars($_GET['keyID']);
 			    		<h3 class="panel-title">Edit Keyboard</h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form method="POST" action="editKeyboardHandler.php?keyboard_id=<?php echo $keyID; ?>">
+			    		<form method="POST" action="editKeyboardHandler.php">
                             <div class="form-group">
                                     <input type="text" name="keyboardName" id="keyboardName" class="form-control input-sm" placeholder="Keyboard Name" required>
                             </div>
