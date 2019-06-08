@@ -86,8 +86,9 @@ foreach ($keyboard_rows as $keyboard_row)
                 <?php if($userK == $usernameS){?>
                   <input type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">
                   <td><a href="editKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit" value="Edit" class="btn btn-info btn-block"></a></td>
-                  <td><a href="removeKeyboard.php"><input type="submit" name="Remove" value="Remove" class="btn btn-info btn-block"></a></td>
+                  <td><a href="removeKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input onclick="doublecheck()" type="button" name="Remove" value="Remove" class="btn btn-info btn-block"></a></td>
                 <?php } ?>
+                <p id="demo"></p>
               </tr>
             </tbody>
           </table>
@@ -127,5 +128,6 @@ if($check == 1){
 <?php
 }
 ?>
+<script type="text/javascript" src="doublecheck.js"></script>
 </body>
 </html>
