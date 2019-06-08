@@ -6,11 +6,12 @@
 	{
 		$usernameS = $_SESSION['username'];
 	}
-	//else
-	//{
-//		header("Location: login.php");/
-		//die();
-	//}
+	else
+	{
+		header("Location: login.php");
+		echo "Please login or create an account";
+		die();
+	}
 ?>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
