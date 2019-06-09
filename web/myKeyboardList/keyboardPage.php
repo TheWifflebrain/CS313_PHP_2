@@ -130,11 +130,11 @@ if($check == 1){
                   <input id="comment_id" type="hidden" name="comment_id" value="<?php echo $cID; ?>"> 
                   <td><input onclick="showInput()" type="submit" name="Edit" value="Edit" class="btn btn-info btn-block"></a></td>
                   <td><input onclick="doublecheck2()" type="button" name="Remove" value="Remove" class="btn btn-info btn-block"></td>
-                  <tr>
-                    <div id="edits" display="none">
-                      <td><input type="text" name="editC" id="editC" class="form-control input-sm" placeholder="Edit Comment" required></td>
-                      <td><input onclick="editComment()" type="button" name="Submit" value="Submit" class="btn btn-info btn-block"></td>   
-                    </div>
+                  <tr id="edits">
+                  
+                    <td><input type="text" name="editC" id="editC" class="form-control input-sm" placeholder="Edit Comment" required></td>
+                    <td><input onclick="editComment()" type="button" name="Submit" value="Submit" class="btn btn-info btn-block"></td>   
+                  
                   <tr>
                 <?php } ?>
                     
