@@ -25,13 +25,11 @@
 			<a class="title nav-link" href="inputKeyboard.php">Add Keyboard</a>
 		</li>
 	</ul>
-	<ul class="nav navbar-nav pull-right">
+	<ul class="centerright nav navbar-nav">
 		<li class="nav-item">
-			<span class="glyphicon glyphicon-log-in"></span>
 			<a class="title nav-link" href="login.php">Login</a>
 		</li>
 		<li class="nav-item">
-			<span class="glyphicon glyphicon-log-out"></span>
 			<a class="title nav-link" href="logout.php">Sign Out</a>
 		</li>
 	</ul>
