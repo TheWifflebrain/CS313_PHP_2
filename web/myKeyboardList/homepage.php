@@ -50,7 +50,7 @@
     $id = $username_row['keyboard_id'];
 ?>
   <div class="border keyList">
-    <div class="jumbotron text-center text-light jdark">
+    <div class="jumbotron text-center">
       <h1><a href="keyboardPage.php?keyboard_id=<?php echo $id ?>"><?php echo $name; ?></a></h1>
     </div>
     <div>
