@@ -33,7 +33,7 @@
             $query0 = "SELECT person.username FROM person WHERE username='$username'";
             $statement0 =$db->prepare($query0);
             $result0 = $statement0->execute();
-            if($result0 != null || $result0 == "")
+            if($result0)
             {
                 $taken = 1;
                 header("Location: signUp.php?taken=1");
