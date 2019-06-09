@@ -53,7 +53,7 @@
     $keyID = $keyboard_row['keyboard_id'];
 ?>
   <div class="border keyList">
-    <div class="jumbotron text-center jdark">
+    <div class="jumbotron text-center">
       <h1><?php echo $name; ?></h1>
       <h4><a href="homepage.php?username=<?php echo $userK ?>"><?php echo $userK; ?></a></h4>
       <?php if($userK == $usernameS){?>
