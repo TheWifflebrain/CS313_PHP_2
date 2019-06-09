@@ -6,7 +6,7 @@
         $email=$_POST['email'];
         $password=$_POST['pwd'];
 		$rptpassword=$_POST['rpt-pwd'];
-		$taken = 0;
+		$taken;
 
         if(!isset($password) || $password == ""){
             header("Location: signUp.php?error=passwordcheck");
@@ -49,7 +49,6 @@
             if($result0 != null)
             {
 				$taken = 1;
-				die();
             }
 
             try{
