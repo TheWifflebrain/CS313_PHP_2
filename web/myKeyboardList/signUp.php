@@ -1,5 +1,6 @@
 <?php
 	$file = $_SERVER['REQUEST_URI'];
+	echo $file;
 ?>
 <!DOCTYPE html>
 <html lang="en">
