@@ -17,7 +17,7 @@
         <div class="col-xs-12 col-sm-8 col-lg-12 centered-form">
         	<div class="panel panel-default">
 				<div class="panel-heading">
-					<?php if($file==='https://tranquil-plains-95396.herokuapp.com/myKeyboardList/signUp.php?taken=1'){ ?>
+					<?php if($file=='https://tranquil-plains-95396.herokuapp.com/myKeyboardList/signUp.php?taken=1'){ ?>
 						<h3 class="bg-warning">Username Taken</h3>
 					<?php } ?>
 				 </div>
@@ -30,30 +30,30 @@
 						<div class="row">
 							<div class="col-xs-6 col-sm-6 col-lg-6">
 								<div class="form-group">
-									<input type="text" name="fName" id="fName" class="form-control input-sm" placeholder="First Name">
+									<input type="text" name="fName" id="fName" class="form-control input-sm" placeholder="First Name" required>
 								</div>
 							</div>
 							<div class="col-xs-6 col-sm-6 col-lg-6">
 								<div class="form-group">
-									<input type="text" name="lName" id="lName" class="form-control input-sm" placeholder="Last Name">
+									<input type="text" name="lName" id="lName" class="form-control input-sm" placeholder="Last Name" required>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username">
+							<input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username" required>
 						</div>
 						<div class="form-group">
-							<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+							<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address" required>
 						</div>
 						<div class="row">
 							<div class="col-xs-6 col-sm-6 col-lg-6">
 								<div class="form-group">
-									<input type="password" name="pwd" id="pwd" class="form-control input-sm" placeholder="Password">
+									<input type="password" name="pwd" id="pwd" class="form-control input-sm" placeholder="Password" required>
 								</div>
 							</div>
 							<div class="col-xs-6 col-sm-6 col-lg-6">
 								<div class="form-group">
-									<input type="password" name="rpt-pwd" id="rpt-pwd" class="form-control input-sm" placeholder="Confirm Password">
+									<input type="password" name="rpt-pwd" id="rpt-pwd" class="form-control input-sm" placeholder="Confirm Password" required>
 								</div>
 							</div>
 						</div>
