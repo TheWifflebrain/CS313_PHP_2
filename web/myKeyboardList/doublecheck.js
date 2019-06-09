@@ -12,3 +12,22 @@ function doublecheck2(){
         window.location.href = "removeCommentHandler.php?keyboard_id=" + keyID +"&comment_id=" +commentID;
     }
 }
+function editComment(){
+    var keyID = document.getElementById("keyboard_id").value;
+    var commentID = document.getElementById("comment_id").value;
+    if(confirm("Are you sure you want to edit this comment?")){
+        window.location.href = "editComment.php?keyboard_id=" + keyID +"&comment_id=" +commentID;
+    }
+}
+
+function showInput(){
+    var x = document.getElementById("edits");
+    if(x.style.display==="none"){
+        x.style.display="block";
+    }
+    else{
+        x.style.display="none";
+    }
+}
+
+//<a href="editComment.php?comment_id=<?php echo $cID; ?>&keyboard_id=<?php echo $keyID; ?>"></a>
