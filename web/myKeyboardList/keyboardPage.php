@@ -159,7 +159,7 @@
             <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>"> 
             <input id="userCP" type="hidden" name="userCP" value="<?php echo $usernameS; ?>">     
             <td>
-              <input type="submit" name="Add Comment" value="Add Comment" class="btn btn-dark btn-sm">
+              <input type="submit" name="Add Comment" value="Add Comment" class="btn btn-dark btn-block">
             </td>
           </tr>
         </tbody>
