@@ -1,5 +1,5 @@
 <?php
-	$file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+	$file = $_SERVER['REQUEST_URI'];
 	echo $file;
 ?>
 <!DOCTYPE html>
