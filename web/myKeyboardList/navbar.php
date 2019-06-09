@@ -24,10 +24,10 @@
 		<li class="nav-item">
 			<a class="title nav-link" href="inputKeyboard.php">Add Keyboard</a>
 		</li>
-		<li class="nav-item float-left">
+		<li class="nav-item float-right">
 			<a class="title nav-link" href="login.php">Login</a>
 		</li>
-		<li class="nav-item float-left">
+		<li class="nav-item float-right">
 			<a class="title nav-link" href="logout.php">Sign Out</a>
 		</li>
 	</ul>

@@ -52,6 +52,21 @@
     $userK = $keyboard_row['username_k'];
     $keyID = $keyboard_row['keyboard_id'];
 ?>
+  <div class="container">
+    <table class="table">
+      <tbody>
+        <tr>
+          <?php if($userK == $usernameS){?>
+            <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
+            <td>
+              <a href="editKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit Keyboard" value="Edit Keyboard" class="btn btn-warning btn-sm"></a>
+              <input onclick="doublecheck()" type="button" name="Remove Keyboard" value="Remove Keyboard" class="btn btn-danger btn-sm">
+            </td>
+          <?php } ?>
+        </tr>
+      </table>
+    </tbody>
+  </div>
   <div class="border keyList">
     <div class="jumbotron text-center">
       <h1><?php echo $name; ?></h1>
@@ -88,19 +103,6 @@
     break;
   }
 ?>
-  <div class="container">
-    <table class="table table-striped">
-      <tbody>
-        <tr>
-          <?php if($userK == $usernameS){?>
-            <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
-            <td><a href="editKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit Keyboard" value="Edit Keyboard" class="btn btn-warning btn-sm"></a></td>
-            <td><input onclick="doublecheck()" type="button" name="Remove Keyboard" value="Remove Keyboard" class="btn btn-danger btn-sm"></td>
-          <?php } ?>
-        </tr>
-      </table>
-    </tbody>
-  </div>
 
 <?php
   if($check == 1){
