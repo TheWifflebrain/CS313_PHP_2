@@ -38,7 +38,7 @@
     $user = $row['username_k'];
 ?>
   <div class="border keyList">
-    <div class="jumbotron text-center jdark text-light">
+    <div class="jumbotron text-center">
       <h1><a href="keyboardPage.php?keyboard_id=<?php echo $id ?>"><?php echo $name; ?></a></h1>
       <h4><a href="homepage.php?username=<?php echo $user ?>"><?php echo $user; ?></a></h4>
     </div>
