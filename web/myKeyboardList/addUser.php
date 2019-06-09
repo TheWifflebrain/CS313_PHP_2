@@ -9,7 +9,19 @@
         $rptpassword=$_POST['rpt-pwd'];
         $regex = "^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{8,}$";
 
-        if($password !== $rptpassword)
+        require("dbConnect.php");
+        $db = get_db();
+
+        $query0 = "SELECT person.username FROM person WHERE username='$username'";
+        $statement0 =$db->prepare($query0);
+        $result0 = $statement0->execute();
+        if(!$result0)
+        {
+            header("Location: signUp.php?taken=1");
+            die();
+        }
+
+        else if($password !== $rptpassword)
         {
             header("Location: signUp.php?error=passwordcheck");
             die();
@@ -27,17 +39,6 @@
             $email=htmlspecialchars($email);
             $password=$_POST['pwd'];
             $hashed_password=password_hash($password, PASSWORD_DEFAULT);
-
-            require("dbConnect.php");
-            $db = get_db();
-            $query0 = "SELECT person.username FROM person WHERE username='$username'";
-            $statement0 =$db->prepare($query0);
-            $result0 = $statement0->execute();
-            if(!$result0)
-            {
-                header("Location: signUp.php?taken=1");
-                die();
-            }
 
             try{
                 $query = 'INSERT INTO person(fName, lName, email, username, passwordU) 
