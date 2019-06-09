@@ -43,15 +43,22 @@
             require("dbConnect.php");
             $db = get_db();
 
-            $query = 'INSERT INTO person(fName, lName, email, username, passwordU) 
-                            VALUES(:fName, :lName, :email, :username, :passwordU)';
-            $statement =$db->prepare($query);
-            $statement->bindValue(':fName', $fName);
-            $statement->bindValue(':lName', $lName);
-            $statement->bindValue(':email', $email);
-            $statement->bindValue(':username', $username);
-            $statement->bindValue(':passwordU', $hashed_password);
-            $statement->execute();
+            try{
+                $query = 'INSERT INTO person(fName, lName, email, username, passwordU) 
+                                VALUES(:fName, :lName, :email, :username, :passwordU)';
+                $statement =$db->prepare($query);
+                $statement->bindValue(':fName', $fName);
+                $statement->bindValue(':lName', $lName);
+                $statement->bindValue(':email', $email);
+                $statement->bindValue(':username', $username);
+                $statement->bindValue(':passwordU', $hashed_password);
+                $statement->execute();
+            }
+            catch(Exception $ex)
+            {
+                echo "Error with the database. Details are $ex";
+                die();
+            }
 
             //logging in
             session_start();
