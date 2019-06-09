@@ -38,7 +38,7 @@
 				</div> 
 				<div class="panel-heading">
 					<?php if($file==="/myKeyboardList/signUp.php?error=passwordrequirements"){ ?>
-						<h3 class="bg-warning">Need At Least One Number, One Character and 8 Characters Long</h3>
+						<h3 class="bg-warning">Passwords Needs At Least One Number, One Character and 8 Characters</h3>
 					<?php } ?>
 				</div>
         		<div class="panel-heading">
