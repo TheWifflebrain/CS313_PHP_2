@@ -14,7 +14,7 @@
             header("Location: signUp.php?error=passwordcheck");
             die();
         }
-        else if(preg_match($regex, $password))
+        else if(!preg_match($regex, $password))
         {
             header("Location: signUp.php?error=passwordrequirements");
             die();
