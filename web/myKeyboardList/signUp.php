@@ -1,5 +1,6 @@
 <?php
 	$file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+	echo $file;
 ?>
 <!DOCTYPE html>
 <html lang="en">
