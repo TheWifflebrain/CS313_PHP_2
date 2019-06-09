@@ -15,8 +15,8 @@
         $query0 = "SELECT person.username FROM person WHERE username='$username'";
         $statement0 =$db->prepare($query0);
         $result0 = $statement0->execute();
-        echo $result0;
-        if(!$result0)
+        $key = $statement0->fetchAll(PDO::FETCH_ASSOC);
+        if($key)
         {
             header("Location: signUp.php?taken=1");
             die();
