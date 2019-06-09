@@ -1,5 +1,5 @@
 <?php 
-    if(isset($_POST['Sign Up'])){
+    if(isset($_POST['signUp'])){
         $fName=$_POST['fName'];
         $lName=$_POST['lName'];
         $username=$_POST['username'];
@@ -61,7 +61,6 @@
             $result = $statement2->execute();
             if($result)
             {
-                echo "hello world";
                 $row = $statement2->fetch();
                 $hashedPasswordFromDB = $row['passwordu'];
                 if (password_verify($password, $hashedPasswordFromDB))
