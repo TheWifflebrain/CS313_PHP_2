@@ -111,7 +111,7 @@
         <div class="col-xs-12 col-sm-8 col-lg-12 centered-form">
         	<div class="panel panel-default">
 				<div class="panel-heading">
-					<?php if($taken==1)){ ?>
+					<?php if($taken==1){ ?>
 						<h3 class="bg-warning">Username Taken</h3>
 					<?php } ?>
 				 </div>
