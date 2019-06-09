@@ -7,7 +7,7 @@
         $email=$_POST['email'];
         $password=$_POST['pwd'];
         $rptpassword=$_POST['rpt-pwd'];
-        $regex = "^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{8,}$";
+        $regex = "/^(?=.*[a-z])(?=.*\\d).{8,}$/i";
 
         require("dbConnect.php");
         $db = get_db();
