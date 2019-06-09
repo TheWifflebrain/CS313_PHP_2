@@ -30,7 +30,7 @@ $cID = htmlspecialchars($_GET['comment_id']);
 			    		<h3 class="panel-title">Edit Comment</h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form method="POST" action="editCommentHandler.php?comment_id=<?php echo $keyID ?>&<?php echo $cID; ?>">
+			    		<form method="POST" action="editCommentHandler.php?keyboard_id=<?php echo $keyID ?>&comment_id=<?php echo $cID; ?>">
                             <div class="form-group">
                                     <input type="text" name="comment" id="comment" class="form-control input-sm" placeholder="Edit Comment">
                             </div>

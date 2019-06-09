@@ -1,7 +1,7 @@
 <?php
 require "dbConnect.php";
     $db = get_db();
-    $keyID = htmlspecialchars($_POST['keyboard_id']);
+    $keyID = htmlspecialchars($_GET['keyboard_id']);
     $cID = htmlspecialchars($_GET['comment_id']);
     $messageC = htmlspecialchars($_POST['comment']);
 
