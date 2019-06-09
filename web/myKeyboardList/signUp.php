@@ -13,6 +13,12 @@
     <div class="row centered-form">
         <div class="col-xs-12 col-sm-8 col-lg-12 centered-form">
         	<div class="panel panel-default">
+				<div class="panel-heading">
+					<?php if(isset($taken)){ ?>
+						<h3 class="panel-title"><?php echo $taken; ?></h3>
+					<?php } ?>
+				 </div>
+				 
         		<div class="panel-heading">
 			    	<h3 class="panel-title">Sign Up!</h3>
 			 	</div>
