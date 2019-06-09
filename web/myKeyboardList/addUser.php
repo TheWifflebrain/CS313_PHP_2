@@ -1,5 +1,5 @@
 <?php 
-    if(isset($_POST['signUp'])){
+    if(isset($_POST['Sign Up'])){
         $fName=$_POST['fName'];
         $lName=$_POST['lName'];
         $username=$_POST['username'];
