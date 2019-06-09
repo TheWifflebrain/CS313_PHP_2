@@ -42,6 +42,14 @@
 
             require("dbConnect.php");
             $db = get_db();
+            $query0 = "SELECT person.username FROM person WHERE username='$username'";
+            $statement0 =$db->prepare($query0);
+            $result0 = $statement0->execute();
+            if($result0 != null)
+            {
+                header("Location: signUp.php?usernameTaken");
+                die();
+            }
 
             try{
                 $query = 'INSERT INTO person(fName, lName, email, username, passwordU) 
@@ -56,7 +64,7 @@
             }
             catch(Exception $ex)
             {
-                echo "Error with the database. Details are $ex";
+                header("Location: signUp.php?somethingwentwrong");
                 die();
             }
 
