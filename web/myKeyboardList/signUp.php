@@ -20,18 +20,17 @@
 					<?php if($file==="/myKeyboardList/signUp.php?taken=1"){ ?>
 						<h3 class="bg-warning">Username Taken</h3>
 					<?php } ?>
-				 </div>
-				 <div class="panel-heading">
+				</div>
+				<div class="panel-heading">
 					<?php if($file==="/myKeyboardList/signUp.php?somethingwentwrong"){ ?>
 						<h3 class="bg-warning">Something Went Wrong With the Database</h3>
 					<?php } ?>
-				 </div>
-				 <div class="panel-heading">
+				</div>
+				<div class="panel-heading">
 					<?php if($file==="/myKeyboardList/signUp.php?couldnotfind"){ ?>
 						<h3 class="bg-warning">Username and Password Do Not Match</h3>
 					<?php } ?>
-				 </div>
-				 
+				</div> 
         		<div class="panel-heading">
 			    	<h3 class="panel-title">Sign Up!</h3>
 			 	</div>
