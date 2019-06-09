@@ -131,10 +131,8 @@ if($check == 1){
                   <td><input onclick="showInput()" type="submit" name="Edit" value="Edit" class="btn btn-info btn-block"></a></td>
                   <td><input onclick="doublecheck2()" type="button" name="Remove" value="Remove" class="btn btn-info btn-block"></td>
                   <tr id="edits" type="hidden">
-                  
                     <td><input type="text" name="editC" id="editC" class="form-control input-sm" placeholder="Edit Comment" required></td>
-                    <td><input onclick="editComment()" type="button" name="Submit" value="Submit" class="btn btn-info btn-block"></td>   
-                  
+                    <td><input onclick="editComment()" type="button" name="Submit" value="Submit" class="btn btn-info btn-block"></td>                   
                   <tr>
                 <?php } ?>
                     

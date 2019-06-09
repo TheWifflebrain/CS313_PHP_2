@@ -23,12 +23,10 @@ function editComment(){
 
 function showInput(){
     var x = document.getElementById("edits");
-    if(x.style.type==="hidden"){
-        x.style.display="block";
+    if(x.style.type=="hidden"){
+        x.style.type="block";
     }
     else{
-        x.style.display="hidden";
+        x.style.type="hidden";
     }
 }
-
-//<a href="editComment.php?comment_id=<?php echo $cID; ?>&keyboard_id=<?php echo $keyID; ?>"></a>
