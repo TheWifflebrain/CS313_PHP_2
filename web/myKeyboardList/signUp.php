@@ -49,8 +49,6 @@
             if($result0 != null)
             {
                 $taken = 1;
-                header("Location: signUp.php?usernameTaken");
-                die();
             }
 
             try{
