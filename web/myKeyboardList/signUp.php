@@ -31,6 +31,16 @@
 						<h3 class="bg-warning">Username and Password Do Not Match</h3>
 					<?php } ?>
 				</div> 
+				<div class="panel-heading">
+					<?php if($file==="/myKeyboardList/signUp.php?error=passwordcheck"){ ?>
+						<h3 class="bg-warning">Passwords Do Not Match</h3>
+					<?php } ?>
+				</div> 
+				<div class="panel-heading">
+					<?php if($file==="/myKeyboardList/signUp.php?error=passwordrequirements"){ ?>
+						<h3 class="bg-warning">Need At Least One Number, One Character and 8 Characters Long</h3>
+					<?php } ?>
+				</div>
         		<div class="panel-heading">
 			    	<h3 class="panel-title">Sign Up!</h3>
 			 	</div>

@@ -7,18 +7,18 @@
         $email=$_POST['email'];
         $password=$_POST['pwd'];
         $rptpassword=$_POST['rpt-pwd'];
+        $regex = "^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{8,}$";
 
-        if(!isset($password) || $password == "")
+        if($password !== $rptpassword)
         {
             header("Location: signUp.php?error=passwordcheck");
             die();
         }
-        else if($password !== $rptpassword)
+        else if(preg_match($regex, $password))
         {
-            header("Location: signUp.php?error=passwordcheck&uid=".$username."&mail=".$email);
+            header("Location: signUp.php?error=passwordrequirements");
             die();
         }
-    
         else
         {
             $fName=htmlspecialchars($fName);
