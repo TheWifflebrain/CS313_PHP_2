@@ -58,10 +58,8 @@
       <h4><a href="homepage.php?username=<?php echo $userK ?>"><?php echo $userK; ?></a></h4>
       <?php if($userK == $usernameS){?>
         <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
-        <td>
-          <a href="editKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit Keyboard" value="Edit Keyboard" class="btn btn-warning btn-sm"></a>
-          <input onclick="doublecheck()" type="button" name="Remove Keyboard" value="Remove Keyboard" class="btn btn-danger btn-sm">
-        </td>
+        <a href="editKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit Keyboard" value="Edit Keyboard" class="btn btn-warning btn-sm"></a>
+        <input onclick="doublecheck()" type="button" name="Remove Keyboard" value="Remove Keyboard" class="btn btn-danger btn-sm">
       <?php } ?>
     </div> 
     <div>
