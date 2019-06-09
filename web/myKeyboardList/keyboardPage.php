@@ -94,8 +94,8 @@
         <tr>
           <?php if($userK == $usernameS){?>
             <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">      
-            <td><a href="editKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit Keyboard" value="Edit Keyboard" class="btn btn-warning btn-block"></a></td>
-            <td><input onclick="doublecheck()" type="button" name="Remove Keyboard" value="Remove Keyboard" class="btn btn-danger btn-block"></td>
+            <td><a href="editKeyboard.php?keyboard_id=<?php echo $keyID; ?>"><input type="submit" name="Edit Keyboard" value="Edit Keyboard" class="btn btn-warning btn-sm"></a></td>
+            <td><input onclick="doublecheck()" type="button" name="Remove Keyboard" value="Remove Keyboard" class="btn btn-danger btn-sm"></td>
           <?php } ?>
         </tr>
       </table>
@@ -129,10 +129,10 @@
           <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">     
           <input id="comment_id" type="hidden" name="comment_id" value="<?php echo $cID; ?>"> 
           <td>
-            <input onclick="editComment()" type="submit" name="Edit Comment" value="Edit Comment" class="btn btn-warning btn-block"></a>
+            <input onclick="editComment()" type="submit" name="Edit Comment" value="Edit Comment" class="btn btn-warning btn-sm"></a>
           </td>
           <td>
-            <input onclick="doublecheck2()" type="button" name="Remove Comment" value="Remove Comment" class="btn btn-danger btn-block">
+            <input onclick="doublecheck2()" type="button" name="Remove Comment" value="Remove Comment" class="btn btn-danger btn-sm">
           </td>
         <?php 
           }
@@ -159,7 +159,7 @@
             <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>"> 
             <input id="userCP" type="hidden" name="userCP" value="<?php echo $usernameS; ?>">     
             <td>
-              <input type="submit" name="Add Comment" value="Add Comment" class="btn btn-dark btn-block">
+              <input type="submit" name="Add Comment" value="Add Comment" class="btn btn-dark btn-sm">
             </td>
           </tr>
         </tbody>
