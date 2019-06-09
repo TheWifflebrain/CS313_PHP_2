@@ -15,6 +15,9 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
 	<ul class="nav navbar-nav">
+		<li class="nav-item">
+			<a class="title nav-link" href="homepage.php?username=<?php echo $usernameS ?>">Welcome, <?php echo $usernameS ?></a>
+		</li>
 		<li class="nav-item <?php if ($file === 'frontpage') echo 'active' ?>">
 			<a class="title nav-link" href="frontpage.php">Frontpage</a>
 		</li>
@@ -22,12 +25,7 @@
 			<a class="title nav-link" href="inputKeyboard.php">Add Keyboard</a>
 		</li>
 	</ul>
-	<ul class="nav navbar-nav navbar-center">
-		<li class="nav-item">
-			<a class="title nav-link" href="homepage.php?username=<?php echo $usernameS ?>">Welcome, <?php echo $usernameS ?></a>
-		</li>
-	</ul>
-	<ul class="nav navbar-nav navbar-right">
+	<ul class="nav navbar-nav pull-right">
 		<li class="nav-item">
 			<span class="glyphicon glyphicon-log-in"></span>
 			<a class="title nav-link" href="login.php">Login</a>
