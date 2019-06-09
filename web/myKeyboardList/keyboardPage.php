@@ -129,8 +129,8 @@
           <input id="keyboard_id" type="hidden" name="keyboard_id" value="<?php echo $keyID; ?>">     
           <input id="comment_id" type="hidden" name="comment_id" value="<?php echo $cID; ?>"> 
           <td>
-            <input onclick="editComment()" type="submit" name="Edit Comment" value="Edit Comment" class="btn btn-warning btn-sm float-right">
-            <input onclick="doublecheck2()" type="button" name="Remove Comment" value="Remove Comment" class="btn btn-danger btn-sm float-right">
+            <input onclick="editComment()" type="submit" name="Edit Comment" value="Edit Comment" class="btn btn-warning btn-sm float-left">
+            <input onclick="doublecheck2()" type="button" name="Remove Comment" value="Remove Comment" class="btn btn-danger btn-sm float-left">
           </td>
         <?php 
           }
