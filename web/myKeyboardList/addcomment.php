@@ -1,9 +1,9 @@
 <?php
-session_start();
-if (isset($_SESSION['username']))
-{
-    $usernameS = $_SESSION['username'];
-}
+    session_start();
+    if (isset($_SESSION['username']))
+    {
+        $usernameS = $_SESSION['username'];
+    }
     require "dbConnect.php";
     $db = get_db();
 

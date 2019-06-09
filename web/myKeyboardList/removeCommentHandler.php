@@ -1,5 +1,4 @@
 <?php
-
     $commentID = $_GET['comment_id'];
     $keyboardID = $_GET['keyboard_id'];
     require('dbConnect.php');
@@ -8,5 +7,4 @@
     $stmt->execute();
     header("Location: keyboardPage.php?keyboard_id=$keyboardID");
     die();
-
 ?>

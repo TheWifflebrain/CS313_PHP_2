@@ -1,7 +1,6 @@
 <?php
 	$file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 	session_start();
-
 	if (isset($_SESSION['username']))
 	{
 		$usernameS = $_SESSION['username'];

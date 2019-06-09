@@ -1,9 +1,8 @@
 <?php
-require "dbConnect.php";
+    require "dbConnect.php";
     $db = get_db();
     $keyID = htmlspecialchars($_GET['keyboard_id']);
     $user = htmlspecialchars($_POST['username_id']);
-
     $switch = htmlspecialchars($_POST['switch']);
     $size = htmlspecialchars($_POST['size']);
     $typeK = htmlspecialchars($_POST['type']);
@@ -12,7 +11,8 @@ require "dbConnect.php";
     $photo = htmlspecialchars($_POST['photo']);
     $name = htmlspecialchars($_POST['keyboardName']);
 
-    if(!isset($switch) || $switch == null){
+    if(!isset($switch) || $switch == null)
+    {
         $stmt = $db->prepare('SELECT keyboard.switch FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
@@ -20,7 +20,8 @@ require "dbConnect.php";
         $switch = $row['switch'];   
     }
 
-    if(!isset($size) || $size==null){
+    if(!isset($size) || $size==null)
+    {
         $stmt = $db->prepare('SELECT keyboard.sizeK FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
@@ -28,7 +29,8 @@ require "dbConnect.php";
         $size = $row['sizek'];
     }
 
-    if(!isset($typeK) || $typeK==null){
+    if(!isset($typeK) || $typeK==null)
+    {
         $stmt = $db->prepare('SELECT keyboard.typeK FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
@@ -36,7 +38,8 @@ require "dbConnect.php";
         $typeK = $row['typek'];
     }
 
-    if(!isset($forsale) || empty($forsale)){
+    if(!isset($forsale) || empty($forsale))
+    {
         $stmt = $db->prepare('SELECT keyboard.forsale FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
@@ -44,7 +47,8 @@ require "dbConnect.php";
         $forsale = $row['forsale'];
     }
 
-    if(!isset($descK) || $descK==null){
+    if(!isset($descK) || $descK==null)
+    {
         $stmt = $db->prepare('SELECT keyboard.descriptionK FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
@@ -52,7 +56,8 @@ require "dbConnect.php";
         $descK = $row['descriptionk'];
     }
 
-    if(!isset($photo) || $photo==null){
+    if(!isset($photo) || $photo==null)
+    {
         $stmt = $db->prepare('SELECT keyboard.photo FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
@@ -60,7 +65,8 @@ require "dbConnect.php";
         $photo = $row['photo'];
     }
 
-    if(!isset($name) || $name==null){
+    if(!isset($name) || $name==null)
+    {
         $stmt = $db->prepare('SELECT keyboard.keyboard_name FROM keyboard WHERE keyboard_id=:id');
         $stmt->bindValue(':id', $keyID, PDO::PARAM_STR);
         $stmt->execute();
@@ -71,9 +77,9 @@ require "dbConnect.php";
 
 
     $stmt = $db->prepare("UPDATE keyboard
-    SET switch=:switch, sizeK=:size, typeK=:typeK,forsale=:forsale, descriptionK=:descK,
-     photo=:photo, keyboard_name=:keyboardName
-    WHERE keyboard_id=$keyID;");
+                          SET switch=:switch, sizeK=:size, typeK=:typeK,forsale=:forsale, descriptionK=:descK,
+                          photo=:photo, keyboard_name=:keyboardName
+                          WHERE keyboard_id=$keyID;");
 
     $stmt->bindValue(':switch', $switch, PDO::PARAM_STR);
     $stmt->bindValue(':size', $size, PDO::PARAM_STR);

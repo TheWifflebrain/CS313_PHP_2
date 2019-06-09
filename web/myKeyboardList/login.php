@@ -25,7 +25,6 @@
 			else
 			{
                 $badLogin = 1;
-            
 			}
 		}
 		else
@@ -48,54 +47,52 @@
 <body>
 
 <div class="container">
-        <div class="row centered-form">
-        <div class="col-xs-12 col-sm-8 col-lg-12 centered-form">
-        	<div class="panel panel-default">
-			<?php
-			if ($badLogin == 1)
-			{
-			?>
-				<h3 class="bg-warning">Incorrect password or username</h3><br/><br/>
-			<?php
-			}			
-			if ($badLogin == 2)
-			{
-			?>
-				<h3 class="bg-warning">Cannot connect to database</h3><br/><br/>
-			<?php
-			}
-			?>
+	<div class="row centered-form">
+		<div class="col-xs-12 col-sm-8 col-lg-12 centered-form">
+			<div class="panel panel-default">
+				<?php
+				if ($badLogin == 1)
+				{
+				?>
+					<h3 class="bg-warning">Incorrect password or username</h3><br/><br/>
+				<?php
+				}			
+				if ($badLogin == 2)
+				{
+				?>
+					<h3 class="bg-warning">Cannot connect to database</h3><br/><br/>
+				<?php
+				}
+				?>
         		<div class="panel-heading">
-			    		<h3 class="panel-title">Login!</h3>
-			 			</div>
-			 			<div class="panel-body">
-			    		<form method="POST" action="login.php">   	
-                		<div class="form-group">
-			    				<input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username">
-			    			</div>
-
-			    			<div class="form-group">
-			    				<input type="password" name="pwd" id="pwd" class="form-control input-sm" placeholder="Password">
-							</div>
-			    			
-			    			<input type="submit" name="login" value="login" class="btn btn-info btn-block">	
-			    		</form>
-						<br/>
-						<br/>
-						<div>
-							<h4 class="panel-body">Don't have an account</h4>
-							<a href="signUp.php"><input type="submit" name="Sign Up" value="Sign Up" class="btn btn-info btn-block"></a>	
+					<h3 class="panel-title">Login!</h3>
+				</div>
+				<div class="panel-body">
+					<form method="POST" action="login.php">   	
+						<div class="form-group">
+							<input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username">
 						</div>
-						<div>
-							<h6 class="panel-body">*You need to have an account to view this website</h6>	
+						<div class="form-group">
+							<input type="password" name="pwd" id="pwd" class="form-control input-sm" placeholder="Password">
 						</div>
-			    		</div>
-	    			</div>
-    		</div>
+						<input type="submit" name="login" value="login" class="btn btn-info btn-block">	
+					</form>
+					<br/>
+					<br/>
+					<div>
+						<h4 class="panel-body">Don't have an account</h4>
+						<a href="signUp.php"><input type="submit" name="Sign Up" value="Sign Up" class="btn btn-info btn-block"></a>	
+					</div>
+					<div>
+						<h6 class="panel-body">*You need to have an account to view this website</h6>	
+					</div>
+				</div>
+	    	</div>
     	</div>
     </div>
-	<?php
-		$badLogin = 0;
-	?>
+</div>
+<?php
+	$badLogin = 0;
+?>
 </body>
 </html>
