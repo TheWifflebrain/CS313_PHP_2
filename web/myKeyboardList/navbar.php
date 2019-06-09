@@ -25,7 +25,7 @@
 			<a class="title nav-link" href="inputKeyboard.php">Add Keyboard</a>
 		</li>
 	</ul>
-	<ul class="nav navbar-nav pull-right">
+	<ul class="nav navbar-nav" class="pull-right">
 		<li class="nav-item">
 			<span class="glyphicon glyphicon-log-in"></span>
 			<a class="title nav-link" href="login.php">Login</a>
