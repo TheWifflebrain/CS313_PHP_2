@@ -14,7 +14,7 @@
 ?>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-	<ul class="navbar-nav">
+	<ul class="nav navbar-nav">
 		<li class="nav-item <?php if ($file === 'frontpage') echo 'active' ?>">
 			<a class="title nav-link" href="frontpage.php">Frontpage</a>
 		</li>
