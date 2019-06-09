@@ -1,5 +1,6 @@
 <?php 
-    if(isset($_POST['signUp'])){
+    if(isset($_POST['signUp']))
+    {
         $fName=$_POST['fName'];
         $lName=$_POST['lName'];
         $username=$_POST['username'];
@@ -7,32 +8,19 @@
         $password=$_POST['pwd'];
         $rptpassword=$_POST['rpt-pwd'];
 
-        if(!isset($password) || $password == ""){
+        if(!isset($password) || $password == "")
+        {
             header("Location: signUp.php?error=passwordcheck");
             die();
         }
-        else if($password !== $rptpassword){
+        else if($password !== $rptpassword)
+        {
             header("Location: signUp.php?error=passwordcheck&uid=".$username."&mail=".$email);
             die();
         }
-        else if(!isset($fName) || $fName == ""){
-            header("Location: signUp.php?error=FirstNamecheck");
-            die();
-        }
-        else if(!isset($lName) || $lName == ""){
-            header("Location: signUp.php?error=lastNamecheck");
-            die();
-        }
-        else if(!isset($email) || $email == ""){
-            header("Location: signUp.php?error=emailcheck");
-            die();
-        }
-        else if(!isset($username) || $username == ""){
-            header("Location: signUp.php?error=usernamecheck");
-            die();
-        }
     
-        else{
+        else
+        {
             $fName=htmlspecialchars($fName);
             $lName=htmlspecialchars($lName);
             $username=htmlspecialchars($username);
