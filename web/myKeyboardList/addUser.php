@@ -48,7 +48,7 @@
             if($result0 != null)
             {
                 $taken = "Username Taken";
-                header("Location: signUp.php?usernameTaken");
+                header("Location: signUp.php?taken=1");
                 die();
             }
 
