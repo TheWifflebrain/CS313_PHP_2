@@ -48,7 +48,8 @@
             $result0 = $statement0->execute();
             if($result0 != null)
             {
-                $taken = 1;
+				$taken = 1;
+				die();
             }
 
             try{
