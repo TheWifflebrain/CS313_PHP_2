@@ -74,7 +74,7 @@
                     die(); 
                 }
                 else{
-                    header("Location: signUp.php");
+                    header("Location: signUp.php?couldnotfind");
                     die();
                 }
             }
