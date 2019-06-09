@@ -24,8 +24,6 @@
 		<li class="nav-item">
 			<a class="title nav-link" href="inputKeyboard.php">Add Keyboard</a>
 		</li>
-	</ul>
-	<ul class="nav navbar-nav" style="float:right">
 		<li class="nav-item">
 			<a class="title nav-link" href="login.php">Login</a>
 		</li>
