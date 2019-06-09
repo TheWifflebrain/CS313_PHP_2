@@ -47,7 +47,7 @@
             $result0 = $statement0->execute();
             if($result0 != null)
             {
-                $taken = "Username Taken";
+                $taken = 1;
                 header("Location: signUp.php?taken=1");
                 die();
             }
