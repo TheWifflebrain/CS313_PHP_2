@@ -12,7 +12,8 @@
 
   require('dbConnect.php');
   $db = get_db();
-  $stmt = $db->prepare('SELECT k.*, p.* FROM keyboard k LEFT JOIN person p on k.username_K = p.username WHERE k.username_K=:user');
+  $stmt = $db->prepare('SELECT k.keyboard_id, k.switch, k.sizeK, k.typeK, k.forsale, k.descriptionK, k.photo, k.keyboard_name, k.username_K,
+   p.username FROM keyboard k LEFT JOIN person p on k.username_K = p.username WHERE k.username_K=:user');
   $stmt->bindValue(':user', $username, PDO::PARAM_INT);
   $stmt->execute();
   $username_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -7,7 +7,9 @@
   $keyboard_id = htmlspecialchars($_GET['keyboard_id']);
   require('dbConnect.php');
   $db = get_db();
-  $stmt = $db->prepare('SELECT k.*, c.* FROM keyboard k LEFT JOIN commentPost c ON k.keyboard_id = c.keyboard_id_CP 
+  $stmt = $db->prepare('SELECT k.keyboard_id, k.switch, k.sizeK, k.typeK, k.forsale, k.descriptionK, k.photo, k.keyboard_name, 
+                        k.username_K, c.keyboard_id_CP, c.messageC, c.username_CP, c.comment_id
+                        FROM keyboard k LEFT JOIN commentPost c ON k.keyboard_id = c.keyboard_id_CP 
                         WHERE c.keyboard_id_CP=:id ORDER BY comment_id DESC');
   $stmt->bindValue(':id', $keyboard_id, PDO::PARAM_INT);
   $stmt->execute();
