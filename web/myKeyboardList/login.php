@@ -4,8 +4,8 @@
 
 	if (isset($_POST['username']) && isset($_POST['pwd']))
 	{
-		$username = $_POST['username'];
-		$password = $_POST['pwd'];
+		$username = htmlspecialchars($_POST['username']);
+		$password = htmlspecialchars($_POST['pwd']);
 		require("dbConnect.php");
 		$db = get_db();
 		$query = 'SELECT passwordU FROM person WHERE username=:username';
