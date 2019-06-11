@@ -6,11 +6,7 @@
     }
     $keyID = htmlspecialchars($_GET['keyboard_id']);
 ?>
-<?php
-$stmt = $db->prepare('SELECT * FROM keyboard WHERE keyboard_id=:id');
-$stmt->bindValue(':id', $keyID, PDO::PARAM_INT);
-$stmt->execute();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,12 +31,7 @@ $stmt->execute();
 		    <div class="panel-body">
 			<form method="POST" action="editKeyboardHandler.php?keyboard_id=<?php echo $keyID ?>">
                             <div class="form-group">
-<?php
-                            $result = $sth->fetch(PDO::FETCH_ASSOC);
-                            $result = $result['keyboard_name'];
-                            echo    "<input type='text' name='keyboardName' id='keyboardName' class='form-control input-sm' value='$result'>"
-?>
-                            <!-- <input type="text" name="keyboardName" id="keyboardName" class="form-control input-sm" placeholder="Keyboard Name"> -->
+                            <input type="text" name="keyboardName" id="keyboardName" class="form-control input-sm" placeholder="Keyboard Name">
                             </div>
                             <div class="form-group">
                                 <input type="text" name="desc" id="desc" class="form-control input-sm" placeholder="Description">
