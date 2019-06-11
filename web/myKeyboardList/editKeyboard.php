@@ -8,7 +8,7 @@
 ?>
 <?php
 $stmt = $db->prepare('SELECT * FROM keyboard WHERE keyboard_id=:id');
-$stmt->bindValue(':id', $keyId, PDO::PARAM_INT);
+$stmt->bindValue(':id', $keyID, PDO::PARAM_INT);
 $stmt->execute();
 ?>
 <!DOCTYPE html>
